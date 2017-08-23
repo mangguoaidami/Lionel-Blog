@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
       <h1>The App Lives!</h1>
       <p>{{ message }}</p>
     </div>
+    <router-outlet></router-outlet>
   `
 })
 export class AppComponent implements OnInit {

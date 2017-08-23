@@ -1,9 +1,11 @@
-// import { Component } from "@angular/core";
+import { Component } from "@angular/core";
 
-// @Component({
-//     selector: 'pages',
-//     styleUrls: [],
-//     templateUrl: ''
-// })
+@Component({
+    selector: 'pages',
+    styleUrls: [],
+    template: `
+        <div>this is pages!</div>
+    `
+})
 
-// export class PagesComponent {}
+export class PagesComponent {}

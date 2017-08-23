@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title><%= htmlWebpackPlugin.options.title %></title>
+  <!-- <title>my blog</title> -->
 
   <meta name="description" content="<%= htmlWebpackPlugin.options.metadata.description %>">
-
-  <% if (webpackConfig.htmlElements.headTags) { %>
+  <link rel="icon" href="./assets/icon/logo.ico">
+  <!-- <% if (webpackConfig.htmlElements.headTags) { %> -->
   <!-- Configured Head Tags  -->
-  <%= webpackConfig.htmlElements.headTags %>
-  <% } %>
+  <!-- <%= webpackConfig.htmlElements.headTags %>
+  <% } %> -->
 
   <!-- base url -->
   <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
@@ -28,10 +29,10 @@
   <div></div>
 </div> -->
 
-<% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+<!-- <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %> -->
 <!-- Webpack Dev Server reload -->
 <script src="/webpack-dev-server.js"></script>
-<% } %>
+<!-- <% } %> -->
 
 </body>
 </html>
