@@ -1,9 +1,9 @@
 {
   "name": "lionel-blog",
-  "version": "0.9.0",
+  "version": "0.3.0",
   "description": "Private Blog ,Angular 2 and Bootstrap 4.",
   "author": "Lionel",
-  "homepage": "http://",
+  "homepage": "http://www.lionelblog.top",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "4.0.1",
@@ -190,10 +190,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mangguoaidami"
+    "url": "https://github.com/mangguoaidami/Lionel-Blog"
   },
   "bugs": {
-    "url": "https://"
+    "url": "https://github.com/mangguoaidami/Lionel-Blog/issues"
   },
   "engines": {
     "node": ">= 5.4.1 < 7"
