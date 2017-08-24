@@ -11,7 +11,7 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    let testToken = sessionStorage.getItem("log.testToken");
+    let testToken = sessionStorage.getItem("blog.testToken");
     let currentTime = new Date().getTime();
 
     // if(expiration !== null && currentTime > Number(expiration)){

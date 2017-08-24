@@ -13,6 +13,10 @@ export const routes = [
     {
         path: 'pages',
         component: PagesComponent,
+        children: [
+            { path: '', redirectTo: 'list', pathMatch: 'full' },
+            { path: 'list', loadChildren: '././list/list.module#ListModule' }
+        ],
         canActivate: [AuthGuard]
     }
 ];

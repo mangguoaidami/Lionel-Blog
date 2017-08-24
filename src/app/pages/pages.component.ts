@@ -1,15 +1,18 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: 'pages',
     styleUrls: [],
     template: `
         <div class="jumbotron text-center">
-        <h1>The App Lives!</h1>
-        <p>{{ message }}</p>
+            <h1>navbar!</h1>
         </div>
-        <div>this is pages!</div>
+        <router-outlet></router-outlet>
+        <footer class="text-center">this is footer!</footer>
     `
 })
 
-export class PagesComponent {}
+export class PagesComponent implements OnInit{
+    public message: string;
+    ngOnInit(){}
+}
