@@ -1,5 +1,6 @@
 .content{
-    height: 430px; background: linear-gradient(135deg, #ffa000 20%, #ff5000 80%);
+    // background: linear-gradient(135deg, #8800fc 20%, #8cfded 80%);
+    background: linear-gradient(135deg, #ffa000 20%, #ff5000 80%);
     overflow: hidden; position: relative;
     &:before{
         background-position: center center;
@@ -32,6 +33,7 @@
                     }
                 }
                 .navbar-brand{
+                    padding: 0;
                     .my_logo{
                         width: 30px;
                         margin-right: 12px;
@@ -50,13 +52,12 @@
                     max-width: 450px;
                     float: none;
                     li{
-                        float: none;
-                        display: inline-block;
                         a{
                             color: #fff;
                             transition: color 0.3s;
                             padding: 10px 15px;
                             font-size: 1.8rem;
+                            background: transparent;
                         }
                     }
                 }
@@ -66,6 +67,24 @@
                     top: 0;
                 }
             }
+        }
+    }
+    .banner{
+        padding-bottom: 30px;
+        .container{
+            .header{
+                h2,p{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .collapse{
+        .navbar-right{
+            display: none;
         }
     }
 }

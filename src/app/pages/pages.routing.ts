@@ -12,6 +12,10 @@ export const routes = [
         loadChildren: 'app/pages/login/login.module#LoginModule'
     },
     {
+        path: 'register',
+        loadChildren: 'app/pages/register/register.module#RegisterModule'
+    },
+    {
         path: 'pages',
         component: PagesComponent,
         children: [
@@ -22,7 +26,7 @@ export const routes = [
             { path: ':id', loadChildren: './article-sigle/article-sigle.module#ArticleSigleModule' }
         ],
         canActivate: [AuthGuard]
-    }
+    },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forChild(routes);
