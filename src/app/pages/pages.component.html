@@ -1,0 +1,60 @@
+<!-- <div class="jumbotron text-center">
+    <h1 [routerLink]="['/pages']">navbar!</h1>
+    <ul>
+        <li>资源下载</li>
+        <li [routerLink]="['/pages/about']">关于我</li>
+    </ul>
+</div> -->
+<div class="content">
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#bs-collapse-1" class="navbar-toggle collapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a [routerLink]="['/pages']" class="navbar-brand">
+                    <span class="my_logo">
+                        <img src="./../../assets/icon/lion.png">
+                    </span>
+                    <span class="brnd_text">
+                        Lionel-blog
+                    </span>
+                </a>
+            </div>
+            <div id="bs-collapse-1" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a [routerLink]="['/pages/source']">source</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/pages/about']">about</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="login" *ngIf="false">
+                        <a href="/">Login</a>
+                    </li>
+                    <li class="logOut">
+                        <a href="/">LogOut</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="banner">
+        <div class="container">
+            <div class="header">
+                <h2 class="text-center">this is title</h2>
+                <p class="text-center">thanks for everybody...</p>
+                <div class="clearfix text-center">
+                    <a href="/" class="btn btn-success btn-lg">signup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<footer class="text-center">this is footer!</footer>

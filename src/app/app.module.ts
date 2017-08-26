@@ -11,6 +11,7 @@ import { PagesModule } from './pages/pages.module';
 
 import { AuthService } from './theme/services/authService/auth.service';
 import { AuthGuard } from './/theme/guards/AuthGuard';
+import { ArticleService } from './theme/services/articleService/article.service';
 
 @NgModule({
   imports: [ 
@@ -28,7 +29,8 @@ import { AuthGuard } from './/theme/guards/AuthGuard';
   providers: [ 
     ENV_PROVIDERS,
     AuthService,
-    AuthGuard
+    AuthGuard,
+    ArticleService
    ],
   bootstrap: [ AppComponent ]
 })

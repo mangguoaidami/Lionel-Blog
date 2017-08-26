@@ -1,11 +1,7 @@
-<ul class="row">
-    <li class="col-sm-4">
-        <h2 [routerLink]="['/']">Git</h2>
-    </li>
-    <li class="col-sm-4">
-        <h2 [routerLink]="['/']">Angular2</h2>
-    </li>
-    <li class="col-sm-4">
-        <h2 [routerLink]="['/']">more</h2>
-    </li>
-</ul>
+<div class="container">
+    <ul class="row">
+        <li class="col-sm-4"  *ngFor="let article of articles">
+            <h2 [routerLink]="['/pages', article.id]">{{article.first_name + article.id}}</h2>
+        </li>
+    </ul>
+</div>
