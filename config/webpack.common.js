@@ -331,7 +331,9 @@ module.exports = function (options) {
        *
        * See: https://gist.github.com/sokra/27b24881210b56bbaff7
        */
-      new LoaderOptionsPlugin({}),
+      new LoaderOptionsPlugin({
+        // bootstrap:"bootstrap.css"
+      }),
 
       new webpack.ProvidePlugin({
         $: "jquery",
@@ -339,7 +341,6 @@ module.exports = function (options) {
         "window.jQuery": "jquery",
         Tether: "tether",
         "window.Tether": "tether",
-        Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
         Alert: "exports-loader?Alert!bootstrap/js/dist/alert",
         Button: "exports-loader?Button!bootstrap/js/dist/button",
         Carousel: "exports-loader?Carousel!bootstrap/js/dist/carousel",
@@ -349,7 +350,9 @@ module.exports = function (options) {
         Popover: "exports-loader?Popover!bootstrap/js/dist/popover",
         Scrollspy: "exports-loader?Scrollspy!bootstrap/js/dist/scrollspy",
         Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
-        Util: "exports-loader?Util!bootstrap/js/dist/util"
+        Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
+        Util: "exports-loader?Util!bootstrap/js/dist/util",
+        // Card: "exports-loader?Card!bootstrap/css/dist/card"
       }),
 
       // Fix Angular 2
