@@ -6,72 +6,87 @@
     </ul>
 </div> -->
 <div class="content">
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target="#bs-collapse-1" class="navbar-toggle collapsed">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a [routerLink]="['/pages']" class="navbar-brand">
-                    <span class="my_logo">
-                        <img src="./../../assets/icon/lion.png">
-                    </span>
-                    <span class="brnd_text">
-                        Lionel-blog
-                    </span>
-                </a>
-            </div>
+    
+    <div class="container">
+        <nav class="navbar navbar-toggleable-md navbar-light">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bs-collapse-1" aria-controls="bs-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+            <a [routerLink]="['/pages']" class="navbar-brand">
+                <span class="my_logo">
+                    <img src="./../../assets/icon/lion.png">
+                </span>
+                <span class="brnd_text">
+                    Lionel-blog
+                </span>
+            </a>
             <div id="bs-collapse-1" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a [routerLink]="['/pages/source']">source</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink]="['/pages/source']">source</a>
                     </li>
-                    <li>
-                        <a [routerLink]="['/pages/about']">about</a>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/pages/about']">about</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="navbar-nav navbar-right">
                     <li class="login" *ngIf="false">
-                        <a href="/">Login</a>
+                        <a [routerLink]="['/']">Login</a>
                     </li>
                     <li class="logOut">
-                        <a href="/">LogOut</a>
+                        <a [routerLink]="['/']">LogOut</a>
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
+    
     <div class="banner">
         <div class="container">
             <div class="header">
                 <h2 class="text-center">Hello World!</h2>
                 <p class="text-center">Welcome to my blog</p>
                 <div class="clearfix text-center">
-                    <a href="/" class="btn btn-warning btn-lg">signup</a>
+                    <a href="/" class="btn btn-outline-warning btn-lg">signup</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<router-outlet></router-outlet>
+<div class="container section">
+    <router-outlet></router-outlet>
+</div>
 <!-- <footer class="text-center">this is footer!</footer> -->
-<div class="container bottom_article">
-    <div class="row">
-        <div class="col-sm-7">
-            <div class="pull-left">
-                    <div class="card" style="width: 20rem">
-                        <!-- <img class="card-img-top" src="./../../assets/img/100k.jpg" alt=""> -->
-                        <img src="/" alt="">
+
+<footer>
+    <div class="container bottom_article">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="pull-left my_avatar">
+                            <!-- <div class="card" style="width: 20rem">
+                                <img class="card-img-top" src="./../../assets/img/100k.jpg" alt="">
+                            </div> -->
+                            <figure class="figure">
+                                    <img src="./../../assets/img/110.png"  class="figure-img img-fluid rounded" alt="">
+                                    <figcaption class="figure-caption">Welcome to discuss with me.</figcaption>
+                                  </figure>
                     </div>
-            </div>
-            <div class="pull-left">
-                    <h3>Thanks for everyone...</h3>
-                    <p>详情大家可以添加我的微信～</p>
+                    <div class="pull-left my_tell">
+                            <h4>Thanks +</h4>
+                            <p>详情大家可以添加我的微信～</p>
+                            <div class="more_link">
+                                <a href="##" class="wechat">
+                                    <!-- <img src="" alt=""> -->
+                                </a>
+                            </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<footer></footer>
+        <div class="right">
+            <p class="text-center">
+                    ©LIONEL ZHANG, powered by private.法律声明
+                    转载内容版权归作者及来源网站所有，本站原创内容转载请注明<br/>来源，商业媒体及纸媒请先联系：lionelzhang123@gmail.com
+            </p>
+        </div>
+</footer>

@@ -21,50 +21,57 @@
         from {top: 0px;}
         to {top: -30%;}
     }
-    .navbar{
+    .container{
+        .navbar{
         padding: 20px 0;
         text-align: center;
-        .container{
-            position: relative;
-            .navbar-header{
-                .navbar-toggle{
-                    .icon-bar{
-                        background-color: #666666;
+        
+        
+            .navbar-toggle{
+                .icon-bar{
+                    background-color: #666666;
+                }
+            }
+            .navbar-brand{
+                padding: 0;
+                .my_logo{
+                    width: 30px;
+                    margin-right: 12px;
+                    img{
+                        width: 30px;
                     }
                 }
-                .navbar-brand{
-                    padding: 0;
-                    .my_logo{
-                        width: 30px;
-                        margin-right: 12px;
-                        img{
-                            width: 30px;
-                        }
-                    }
-                    .brnd_text{
-                        color: #4F3A4B;
-                    }
+                .brnd_text{
+                    color: #4F3A4B;
                 }
             }
             .collapse{
-                .nav{
+                position: relative;
+                .navbar-nav{
                     margin: auto;
                     max-width: 450px;
                     float: none;
-                    li{
-                        a{
+                    .nav-item{
+                        .nav-link{
                             color: #fff;
                             transition: color 0.3s;
                             padding: 10px 15px;
                             font-size: 1.8rem;
-                            background: transparent;
+                            // background: transparent;
                         }
                     }
                 }
                 .navbar-right{
                     position: absolute;
                     right: 15px;
-                    top: 0;
+                    top: 50%;
+                    margin-top: -5px;
+                    li{
+                        a{
+                            color: #ffffff;
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
         }
@@ -77,6 +84,56 @@
                     color: #ffffff;
                 }
             }
+        }
+    }
+}
+.section{
+    padding: 30px 0;
+}
+footer{
+    background-color: #696969;
+    .bottom_article{
+        padding: 30px 0;
+        .row{
+            .col-sm-7{
+                .my_avatar{
+                    .figure{
+                        width: 150px; height: 150px;
+                        .figure-caption{
+                            color: #ffffff;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .my_tell{
+                    margin-left: 1.5rem;
+                    h4{
+                        color: #ffffff;
+                    }
+                    p{
+                        color: #999999;
+                    }
+                    .more_link{
+                        .wechat{
+                            display: block;
+                            background: url(./../../assets/icon/wechat.png) center no-repeat; width: 32px; height: 32px; background-size: contain;
+                            &:hover{
+                                display: block;
+                                background: url(./../../assets/icon/wechat1.png) center no-repeat; width: 32px; height: 32px; background-size: contain;
+                            }
+                            // &:hover{
+                            //     background-color: #cccccc;
+                            // }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        background-color: #111111;
+        p{
+            font-size: 12px;
         }
     }
 }
