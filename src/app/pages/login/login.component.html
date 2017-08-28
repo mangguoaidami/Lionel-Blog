@@ -2,23 +2,26 @@
     <div class="login-card">
             <h3>Log-in</h3>
             <hr>
-            <form action="dash.html">
-                <div class="form-group">
-                <label for="formGroupEmail">Email</label>
-                <input type="email" class="form-control" id="formGroupEmail" placeholder="Email/Username">
-                </div>
-                <div class="form-group">
-                <label for="formGroupPassword">Password</label>
-                <input type="password" class="form-control" id="formGroupPassword" placeholder="Password">
+            <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+                <div class="form-group" [ngClass]="{'has-error': (!email.valid && email.touched), 'has-success': (email.valid && email.touched)}">
+                    <label for="formGroupEmail">Email</label>
+                    <input type="text" [formControl]="email" name="formGroupEmail" class="form-control" id="formGroupEmail" placeholder="Email/Username">
                 </div>
 
+                <div class="form-group" [ngClass]="{'has-error': (!password.valid && password.touched), 'has-success': (password.valid && password.touched)}">
+                    <label for="formGroupPassword">Password</label>
+                    <input type="password" [formControl]="password" class="form-control" name="formGroupPassword" id="formGroupPassword" placeholder="Password">
+                </div>
 
                 <div class="login-help">
                     <p>By signing up or clicking <a [routerLink]="['/register']">here</a>, I confirm that I have
             read and agree to the Terms and <a href="/">Privacy Policy</a></p>
                 </div>
                 
-                <button class="btn btn-info btn-block login-submit" type="submit">Login</button>
+                <div class="form-group">
+                    <button class="btn btn-info btn-block login-submit" type="submit" [disabled]="!form.valid">Login</button>
+                </div>
+                <p>{{email}}</p>
             </form>
     </div>
 </div>
