@@ -13,15 +13,12 @@ export class AuthService {
   isLoggedIn() {
     let testToken = sessionStorage.getItem("blog.testToken");
     let currentTime = new Date().getTime();
-
-    // if(expiration !== null && currentTime > Number(expiration)){
-    //   sessionStorage.clear();
-    //   return false;
-    // }
+    
+    /**
+     * If local sessionStorage
+     */
     if(testToken == 'test'){
         return true;
     }
-
-    // return sessionStorage.getItem("isk.accessToken") !== null;
   }
 }

@@ -23,7 +23,7 @@ export class ArticleSigleComponent implements OnInit{
         this.service.getArticleSigle(id)
             .subscribe(data => {
                 this.article = data;
-                console.log(data);
+                // console.log(data);
             });
     }
 }

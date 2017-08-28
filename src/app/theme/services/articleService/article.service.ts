@@ -15,7 +15,8 @@ export class ArticleService{
    * Get all article
    */
     getAllArticle() {
-        return this.http.get(this.url)
+        // return this.http.get(this.url)
+        return this.http.get('./../../../../assets/mocks/article.response.json')
         .map(res => res.json().data);
     }
 
@@ -24,7 +25,9 @@ export class ArticleService{
      * Get a sigle Article
      * */
     getArticleSigle(id: number){    
-        return this.http.get(`${this.url}/${id}`)
-            .map(res=> res.json().data);
+        // return this.http.get(`${this.url}/${id}`)
+        //     .map(res=> res.json().data);
+        return this.http.get('./../../../../assets/mocks/article.response.json')
+            .map(res => res.json().data[id]);
     }
 }

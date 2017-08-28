@@ -1,7 +1,14 @@
 <div class="container">
     <ul class="row">
         <li class="col-sm-4"  *ngFor="let article of articles">
-            <h2 [routerLink]="['/pages', article.id]">{{article.first_name + article.id}}</h2>
+            <!-- <h2 [routerLink]="['/pages', article.id-1]">{{article.title}}</h2> -->
+            <div class="card my-article">
+                <img class="card-img-top" [src]="article.avatar" alt="" [routerLink]="['/pages', article.id-1]">
+                <div class="card-block">
+                    <h4>{{article.title}}</h4>
+                    <p>{{article.introduction}}</p>
+                </div>
+            </div>
         </li>
     </ul>
 </div>
