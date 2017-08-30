@@ -3,9 +3,9 @@
 The simple of blog, just get up and running with Angular 2. 
 
 
-    // "bootstrap": "4.0.0-alpha.2",
-    ###main view
-    <a target="_blank" href="http://"><img src="http://" width="600" alt="yellow theme"/></a>
+### main view
+
+<a target="_blank" href="http://"><img src="http://" width="600" alt="yellow theme"/></a>
 
 <a target="_blank" href="http://">Online</a>
 
