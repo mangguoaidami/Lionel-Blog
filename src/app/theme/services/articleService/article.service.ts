@@ -17,7 +17,7 @@ export class ArticleService{
     getAllArticle() {
         // return this.http.get(this.url)
         return this.http.get('./../../../../assets/mocks/article.response.json')
-        .map(res => res.json().data);
+            .map(res => res.json().data);
     }
 
 
@@ -29,5 +29,37 @@ export class ArticleService{
         //     .map(res=> res.json().data);
         return this.http.get('./../../../../assets/mocks/article.response.json')
             .map(res => res.json().data[id]);
+    }
+
+    /**
+     * Get Angular article list
+     */
+    getAllAngularArticle(){
+        return this.http.get('./../../../../assets/mocks/article-angular.response.json')
+            .map(res => res.json().data)
+    }
+
+    /**
+     * Get Angular sigle article detiel
+     */
+    getAngularSigle(id: number){
+        return this.http.get('./../../../../assets/mocks/article-angular.response.json')
+            .map(res => res.json().data[id])
+    }
+
+     /**
+     * Get Rxjs article list
+     */
+    getAllRxjsArticle(){
+        return this.http.get('./../../../../assets/mocks/article-rxjs.response.json')
+            .map(res => res.json().data)
+    }
+
+    /**
+     * Get Rxjs sigle article detiel
+     */
+    getRxjsSigle(id: number){
+        return this.http.get('./../../../../assets/mocks/article-rxjs.response.json')
+            .map(res => res.json().data[id])
     }
 }

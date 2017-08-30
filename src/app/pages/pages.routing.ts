@@ -21,12 +21,16 @@ export const routes = [
         children: [
             { path: '', redirectTo: 'list', pathMatch: 'full' },
             { path: 'list', loadChildren: './list/list.module#ListModule' },
+            { path: 'articleangular', loadChildren: './article-angular/article-angular.module#ArticleAngularModule' },
+            { path: 'articlerxjs', loadChildren: './article-rxjs/article-rxjs.module#ArticleRxjsModule'},
             { path: 'source', loadChildren: './source/source.module#SourceModule' },
             { path: 'about', loadChildren: './about/about.module#AboutModule' },
-            { path: ':id', loadChildren: './article-sigle/article-sigle.module#ArticleSigleModule' }
+            { path: 'article/:id', loadChildren: './article-sigle/article-sigle.module#ArticleSigleModule' },
+            { path: 'angulesigle/:id', loadChildren: './angular-sigle/angular-sigle.module#AngularSigleModule' },
+            { path: 'rxjssigle/:id', loadChildren: './rxjs-sigle/rxjs-sigle.module#RxjsSigleModule' }
         ],
         canActivate: [AuthGuard]
-    },
+    }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forChild(routes);

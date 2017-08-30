@@ -10,21 +10,36 @@
             "title":"Git",
             "last_name":"bluth",
             "avatar":"./assets/img/git_img.png",
-            "introduction": "this is about Git introduction..."
+            "introduction": "this is about Git introduction...",
+            "text": "<div class='alert alert-warning'><p>从本地获取远程分支</p><kbd>$ git checkout -b local-name origin/remote-name</kbd></div><div class='alert alert-warning'><p>查看本地用户名和邮箱</p><kbd>$ git config user.name</br>$ git config user.email</kbd></div><div class='alert alert-warning'><p>删除本地分支</p><kbd>$ git branch -d <branch-name></kbd></div><div class='alert alert-warning'><p>强行删除本地分支（如果没有完全合并）</p><kbd>$ git branch -D <branch-name></kbd></div><div class='alert alert-warning'><p>删除远程分支</p><kbd>$ git push origin --delete <branch-name></kbd></div>",
+            "link": null
         },
         {
             "id":2,
             "title":"Angular2",
             "last_name":"bluth",
             "avatar":"./assets/img/angular2_img.png",
-            "introduction": "this is about Angular2 introduction..."
+            "introduction": "this is about Angular2 introduction...",
+            "text": "<img class='img-fluid ng-banner' src='./../../../assets/img/overview2.png' alt='angular2'><div class='row ng-article'><div class='col-sm-6'><img class='img-fluid' src='./../../../assets/img/speed1.svg' alt=''></div><div class='col-sm-6'><h3>开发跨平台应用</h3><p>学习通过Angular来构建应用程序，并重复利用你的代码和能力来构建可在任何平台上部署的应用。这些平台可以是PC站点、移动站点、PC本地应用和移动本地应用等。</p></div></div><div class='row'><div class='col-sm-6'><h3>速度与性能</h3><p>实现当前Web平台最大可能的速度，并更近一步提升，通过Web Worker和服务端渲染技术。 Angular让你在扩展性上可以控制。比如说，通过RxJS、Immutable.js或者其他推模式建立数据模型来满足大数据需求。</p></div><div class='col-sm-6'><img class='img-fluid' src='./../../../assets/img/speed2.svg' alt=''></div></div><div class='row'><div class='col-sm-6'><img class='img-fluid' src='./../../../assets/img/speed3.png' alt=''></div><div class='col-sm-6'><h3>难以置信的工具</h3><p>通过简单的声明模板快速构建特性。通过你自己的组件和利用大量现有组件，扩展模板语言。在几乎所有的IDE和编辑器里可以立即获得针对Angular的帮助和提示。当这一切在一起，你可以将注意力集中在如何打造你惊艳的App上面，而不是尝试如何使代码工作。</p></div></div><div class='row'><div class='col-sm-6'><h3>众多粉丝的喜爱</h3><p>从原型开始到最后的全球上线部署，Angular提供了富有生产力和可扩展性的基础设施来支持Google大量的应用。</p></div><div class='col-sm-6'><img class='img-fluid' src='./../../../assets/img/speed4.png' alt=''></div></div>",
+            "link": "/pages/articleangular"
         },
         {
             "id":3,
-            "title":"More",
+            "title":"Rxjs",
             "last_name":"bluth",
-            "avatar":"./assets/img/git_img.png",
-            "introduction": "this is about More introduction..."
+            "avatar":"./assets/img/rxjs.png",
+            "introduction": "this is about Rxjs introduction...",
+            "text": "dsadada",
+            "link": "/pages/articlerxjs"
+        },
+        {
+            "id":4,
+            "title":"Bootstrap",
+            "last_name":"bluth",
+            "avatar":"./assets/img/bootstrap.png",
+            "introduction": "this is about Bootstrap introduction...",
+            "text": "start bootstrap...",
+            "link": null
         }
     ]
 }

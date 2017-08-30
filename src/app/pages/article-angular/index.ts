@@ -1,0 +1,1 @@
+export * from './article-angular.component';

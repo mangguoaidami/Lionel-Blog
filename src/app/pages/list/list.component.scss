@@ -2,6 +2,10 @@ li{
     list-style: none;
 }
 .my-article{
+    margin-bottom: 2.5rem; transition: all 0.3s ease-in;
+    &:hover{
+        box-shadow: 7px 15px 20px rgba(0, 0, 0, 0.3);
+    }
     .card-img-top{
         cursor: pointer;
     }

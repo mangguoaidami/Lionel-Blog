@@ -1,3 +1,6 @@
 <div *ngIf="article">
-    <h1 class="text-center">{{ article.title | json }}</h1>
+    <p class="display-4 text-center">{{ article.title | json }}</p>
+    <a [routerLink]="[article.link]" class="btn btn-outline-warning btn-lg btn-block" *ngIf="article.link">content</a>
+    <p class="lead text-center">{{ article.introduction }}</p>
+    <div [innerHTML]="article.text"></div>
 </div>

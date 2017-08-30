@@ -24,6 +24,6 @@ export class ArticleSigleComponent implements OnInit{
             .subscribe(data => {
                 this.article = data;
                 // console.log(data);
-            });
+        });
     }
 }

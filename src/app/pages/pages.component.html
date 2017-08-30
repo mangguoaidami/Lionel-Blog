@@ -23,10 +23,13 @@
             <div id="bs-collapse-1" class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" [routerLink]="['/pages/source']">source</a>
+                                <a class="nav-link" [routerLink]="['/pages/list']">Topic</a>
+                            </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink]="['/pages/source']">Source</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" [routerLink]="['/pages/about']">about</a>
+                        <a class="nav-link" [routerLink]="['/pages/about']">AboutAuthor</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-right">
@@ -47,7 +50,7 @@
                 <h2 class="text-center">Hello World!</h2>
                 <p class="text-center">Welcome to my blog</p>
                 <div class="clearfix text-center">
-                    <a href="/" class="btn btn-outline-danger btn-lg">signup</a>
+                    <a [routerLink]="['/register']" class="btn btn-outline-danger btn-lg">signup</a>
                 </div>
             </div>
         </div>

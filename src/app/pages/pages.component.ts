@@ -9,6 +9,8 @@ import { Component, OnInit } from "@angular/core";
 export class PagesComponent implements OnInit{
 
     ngOnInit(){
-        // console.log(this.initalBg);
+        // var div = this.elRef.nativeElement.querySelector('button');
     }
+
+    
 }
