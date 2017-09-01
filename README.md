@@ -18,6 +18,4 @@ The simple of blog, just get up and running with Angular 2.
 * Sass
 * Angular 2
 * jQuery
-* Charts (Chartist, Chart.js)
-* Maps (Google, Leaflet, amMap)
 * and many more!

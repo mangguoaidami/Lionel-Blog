@@ -25,6 +25,7 @@ export const routes = [
             { path: 'articlerxjs', loadChildren: './article-rxjs/article-rxjs.module#ArticleRxjsModule'},
             { path: 'source', loadChildren: './source/source.module#SourceModule' },
             { path: 'about', loadChildren: './about/about.module#AboutModule' },
+            { path: 'more', loadChildren: './more/more.module#MoreModule' },
             { path: 'article/:id', loadChildren: './article-sigle/article-sigle.module#ArticleSigleModule' },
             { path: 'angulesigle/:id', loadChildren: './angular-sigle/angular-sigle.module#AngularSigleModule' },
             { path: 'rxjssigle/:id', loadChildren: './rxjs-sigle/rxjs-sigle.module#RxjsSigleModule' }
