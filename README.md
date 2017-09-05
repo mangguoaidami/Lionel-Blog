@@ -5,7 +5,7 @@ The simple of blog, just get up and running with Angular 2.
 
 ### main view
 
-<a target="_blank" href="http://"><img src="http://" width="600" alt="yellow theme"/></a>
+<a target="_blank" href="http://"><img src="http://bxw2359200396.my3w.com/images/WechatIMG93.jpeg" width="600" alt="yellow theme"/></a>
 
 <a target="_blank" href="http://">Online</a>
 

@@ -16,12 +16,7 @@
       ],
       "typeRoots": [
         "node_modules/@types"
-      ],
-      "paths": {
-        "@angular/*": [
-          "../node_modules/@angular/*"
-        ]
-      }
+      ]
     },
     "exclude": [
       "node_modules",
