@@ -7,7 +7,7 @@ The simple of blog, just get up and running with Angular 2.
 
 <a target="_blank" href="http://"><img src="http://bxw2359200396.my3w.com/images/WechatIMG93.jpeg" width="600" alt="yellow theme"/></a>
 
-<a target="_blank" href="http://">Online</a>
+<a target="_blank" href="http://bxw2359200396.my3w.com/">Online</a>
 
 ## Features
 * TypeScript
