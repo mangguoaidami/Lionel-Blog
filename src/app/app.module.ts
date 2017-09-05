@@ -12,6 +12,8 @@ import { PagesModule } from './pages/pages.module';
 import { AuthService } from './theme/services/authService/auth.service';
 import { AuthGuard } from './/theme/guards/AuthGuard';
 import { ArticleService } from './theme/services/articleService/article.service';
+import { NgaModule } from './theme/nga.module'
+// import { HeaderComponent } from './theme/components/header/header.component';
 
 @NgModule({
   imports: [ 
@@ -21,7 +23,8 @@ import { ArticleService } from './theme/services/articleService/article.service'
     ReactiveFormsModule,
     PagesModule,
     RouterModule,
-    routing
+    routing,
+    NgaModule.forRoot()// import Nga modules
   ],
   declarations: [ 
     AppComponent

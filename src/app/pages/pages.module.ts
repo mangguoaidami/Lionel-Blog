@@ -3,10 +3,11 @@ import { CommonModule }  from '@angular/common';
 
 import { PagesComponent } from './pages.component';
 import { routing } from './pages.routing';
-// import { ArticleSigleComponent } from './article-sigle/article-sigle.component';
+import { NgaModule } from './../theme/nga.module'
+// import { HeaderComponent } from './../theme/components/header/header.component';
 
 @NgModule({
-    imports: [ routing, CommonModule ],
+    imports: [ routing, CommonModule, NgaModule ],
     declarations: [ PagesComponent ]
 })
 

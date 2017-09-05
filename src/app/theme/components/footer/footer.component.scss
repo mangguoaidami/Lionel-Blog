@@ -1,0 +1,47 @@
+footer{
+    background-color: #696969;
+    .bottom_article{
+        padding: 30px 0;
+        .row{
+            .col-sm-7{
+                .my_avatar{
+                    .figure{
+                        width: 150px; height: 150px;
+                        .figure-caption{
+                            color: #ffffff;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .my_tell{
+                    margin-left: 1.5rem;
+                    h4{
+                        color: #ffffff;
+                    }
+                    p{
+                        color: #999999;
+                    }
+                    .more_link{
+                        .wechat{
+                            display: block;
+                            background: url(./../../assets/icon/wechat.png) center no-repeat; width: 32px; height: 32px; background-size: contain;
+                            &:hover{
+                                display: block;
+                                background: url(./../../assets/icon/wechat1.png) center no-repeat; width: 32px; height: 32px; background-size: contain;
+                            }
+                            // &:hover{
+                            //     background-color: #cccccc;
+                            // }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        background-color: #111111;
+        p{
+            font-size: 12px;
+        }
+    }
+}

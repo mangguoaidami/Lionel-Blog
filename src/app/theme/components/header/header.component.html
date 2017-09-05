@@ -1,0 +1,53 @@
+<div class="content">
+    <div class="container">
+        <nav class="navbar navbar-toggleable-md navbar-light">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bs-collapse-1" aria-controls="bs-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+            <a [routerLink]="['/pages']" class="navbar-brand">
+                <span class="my_logo">
+                    <img src="./../../assets/icon/lion.png">
+                </span>
+                <span class="brnd_text">
+                    Lionel-blog
+                </span>
+            </a>
+            <div id="bs-collapse-1" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                                <a class="nav-link" [routerLink]="['/pages/list']">Topic</a>
+                            </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink]="['/pages/source']">Source</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/pages/about']">AboutAuthor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/pages/more']">More</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-right">
+                    <li class="login" *ngIf="false">
+                        <a [routerLink]="['/']">Login</a>
+                    </li>
+                    <li class="logOut">
+                        <a [routerLink]="['/']">LogOut</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="banner">
+        <div class="container">
+            <div class="header">
+                <h2 class="text-center">Hello World!</h2>
+                <p class="text-center">Welcome to my blog</p>
+                <div class="clearfix text-center">
+                    <a [routerLink]="['/register']" class="btn btn-outline-danger btn-lg">signup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
