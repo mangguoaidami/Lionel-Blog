@@ -14,6 +14,9 @@ import { AuthGuard } from './/theme/guards/AuthGuard';
 import { ArticleService } from './theme/services/articleService/article.service';
 import { NgaModule } from './theme/nga.module'
 // import { HeaderComponent } from './theme/components/header/header.component';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/do';
 
 @NgModule({
   imports: [ 

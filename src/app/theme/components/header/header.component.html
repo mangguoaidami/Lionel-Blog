@@ -31,8 +31,8 @@
                     <li class="login" *ngIf="false">
                         <a [routerLink]="['/']">Login</a>
                     </li>
-                    <li class="logOut">
-                        <a [routerLink]="['/']">LogOut</a>
+                    <li class="logout">
+                        <a (click)="logout()">LogOut</a>
                     </li>
                 </ul>
             </div>

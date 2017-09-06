@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
+
 import { AuthService } from './../../theme/services/authService/auth.service';
 
 @Component({
@@ -25,14 +26,20 @@ export class LoginComponent {
           this.email = this.form.controls['email'];
           this.password = this.form.controls['password'];
     }
-
-    public onSubmit(values:Object):void {
-        this.submitted = true;
-        let passOb = {email: "admin", password: "1234"};
-        // console.log(values);
-        if(values = passOb){
-            sessionStorage.setItem("blog.testToken", "test");
-            this.router.navigate(['/pages']);
-        }
+    /**
+     * login表单提交
+     */
+    public onSubmit() {
+        this.submitted = true;      //绑定submitted
+        this.authService.login(this.email.value, this.password.value)
+            .subscribe(
+                data => {
+                    this.router.navigate(['/pages'])
+                },
+                err => {
+                    console.error(err);
+                }
+            )
+        
     }
 }

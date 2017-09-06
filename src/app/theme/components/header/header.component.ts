@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'header-app',
@@ -6,4 +7,14 @@ import { Component } from '@angular/core';
     styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent{}
+export class HeaderComponent{
+    public logIn: boolean;
+
+    constructor(private router: Router){}
+
+    logout(){
+        localStorage.removeItem("auth_token");//删除localstorage
+        this.logIn = false;
+        this.router.navigate(['/login'])
+    };
+}
