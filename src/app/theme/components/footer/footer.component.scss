@@ -22,17 +22,55 @@ footer{
                         color: #999999;
                     }
                     .more_link{
+                        .fo_icon{
+                            display: inline-block; width: 32px; height: 32px; cursor: pointer;
+                        }
                         .wechat{
-                            display: block;
-                            background: url(./../../assets/icon/wechat.png) center no-repeat; width: 32px; height: 32px; background-size: contain;
+                            background: url(./../../assets/icon/wechat.png) center no-repeat;
                             &:hover{
-                                display: block;
-                                background: url(./../../assets/icon/wechat1.png) center no-repeat; width: 32px; height: 32px; background-size: contain;
+                                background: url(./../../assets/icon/wechat1.png) center no-repeat; width: 32px; height: 32px;
                             }
                             // &:hover{
                             //     background-color: #cccccc;
                             // }
                         }
+                        .facebook{
+                            background: url(./../../assets/icon/facebook.png) center no-repeat;
+                            &:hover{
+                                background: url(./../../assets/icon/facebook1.png) center no-repeat; width: 32px; height: 32px;
+                            }
+                        }
+                        .linkedin{
+                            background: url(./../../assets/icon/social-linkedin.png) center no-repeat;
+                            &:hover{
+                                background: url(./../../assets/icon/social-linkedin1.png) center no-repeat; width: 32px; height: 32px;
+                            }
+                        }
+                        .github{
+                            background: url(./../../assets/icon/github.png) center no-repeat;
+                            &:hover{
+                                background: url(./../../assets/icon/github1.png) center no-repeat; width: 32px; height: 32px;
+                            }
+                        }
+                        .zhanku{
+                            background: url(./../../assets/icon/zhanku.png) center no-repeat;
+                            &:hover{
+                                background: url(./../../assets/icon/zhanku1.png) center no-repeat; width: 32px; height: 32px;
+                            }
+                        }
+                        .my_weichat{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .col-sm-5{
+                .pull-left{
+                    h4{
+                        color: #ffffff;
+                    }
+                    p{
+                        color: #999999;
                     }
                 }
             }
