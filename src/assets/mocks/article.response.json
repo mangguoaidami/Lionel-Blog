@@ -58,6 +58,33 @@
             "introduction": "<p class='text-center'>this is about React-Native introduction</p>",
             "text": "React Native",
             "link": null
+        },
+        {
+            "id":7,
+            "title":"ES2015",
+            "subtitle":"this is about ES2015...",
+            "avatar":"./assets/img/es2015.jpg",
+            "introduction": "<p class='text-center'>this is about ES2015 introduction</p>",
+            "text": "addada",
+            "link": null
+        },
+        {
+            "id":8,
+            "title":"webpack & gulp",
+            "subtitle":"this is about w_g...",
+            "avatar":"./assets/img/g_w.jpg",
+            "introduction": "<p class='text-center'>this is about w_g introduction</p>",
+            "text": "w_g...",
+            "link": null
+        },
+        {
+            "id":9,
+            "title":"mysql",
+            "subtitle":"this is about mysql...",
+            "avatar":"./assets/img/mysql.jpg",
+            "introduction": "<p class='text-center'>this is about mysql introduction</p>",
+            "text": "mysql...",
+            "link": null
         }
     ]
 }

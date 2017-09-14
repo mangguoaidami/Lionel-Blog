@@ -105,6 +105,7 @@
     "npm-run-all": "4.0.2",
     "optimize-js-plugin": "0.0.4",
     "postcss-loader": "1.3.3",
+    "protractor": "^5.1.2",
     "raw-loader": "0.5.1",
     "resolve-url-loader": "2.0.2",
     "rimraf": "2.6.1",
@@ -185,7 +186,8 @@
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && webpack --config config/webpack.prod.js  --progress --profile --bail",
     "build:aot": "npm run build:aot:prod",
     "clean:aot": "npm run rimraf -- compiled",
-    "build:ci": "npm run build:prod && npm run build:aot"
+    "build:ci": "npm run build:prod && npm run build:aot",
+    "test:e2e": "protractor ./e2e/config.js"
   },
   "repository": {
     "type": "git",
