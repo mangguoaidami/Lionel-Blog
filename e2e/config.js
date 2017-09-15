@@ -1,30 +1,37 @@
-/**
- * Created by stephen on 2016/3/24.
- */
+// Protractor configuration file, see link for more information
+// https://github.com/angular/protractor/blob/master/lib/config.ts
 
-// An example configuration file
+/*global jasmine */
+const { SpecReporter } = require('jasmine-spec-reporter');
+
 exports.config = {
-  
-      allScriptsTimeout: 11000,
-  
-      baseUrl: 'http://localhost:4200',
-  
-      // Capabilities to be passed to the webdriver instance.
-      capabilities: {
-          'browserName': 'chrome'
-      },
-  
-      framework: 'jasmine',
-  
-      // Spec patterns are relative to the configuration file location passed
-      // to protractor (in this example conf.js).
-      // They may include glob patterns.
-      specs: ['./*.e2e-spec.ts'],
-  
-      // Options to be passed to Jasmine-node.
-      jasmineNodeOpts: {
-          showColors: true, // Use colors in the command line report.
-      },
-  
-      defaultTimeoutInterval: 30000
-  };
+  allScriptsTimeout: 11000,
+  specs: [
+    './*.e2e-spec.ts'
+  ],
+  capabilities: 
+    { 
+      browserName: 'chrome'
+     },
+  // multiCapabilities: [{
+  //   'browserName': 'firefox'
+  // }, {
+  //   'browserName': 'chrome'
+  // }],
+  directConnect: true,
+  baseUrl: 'http://localhost:3000/',
+  framework: 'jasmine',
+  jasmineNodeOpts: {
+    showColors: true,
+    defaultTimeoutInterval: 30000,
+    print: function() {}
+  },
+  beforeLaunch: function() {
+    require('ts-node').register({
+      project: 'e2e'
+    });
+  },
+  onPrepare() {
+    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+  }
+};
