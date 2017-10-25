@@ -11,7 +11,7 @@
             "subtitle": "this is about Git introduction...",
             "avatar":"./assets/img/git_img.png",
             "introduction": "this is about Git introduction...",
-            "text": "<div class='alert alert-warning'><p>从本地获取远程分支</p><kbd>$ git checkout -b local-name origin/remote-name</kbd></div><div class='alert alert-warning'><p>查看本地用户名和邮箱</p><kbd>$ git config user.name</br>$ git config user.email</kbd></div><div class='alert alert-warning'><p>删除本地分支</p><kbd>$ git branch -d <branch-name></kbd></div><div class='alert alert-warning'><p>强行删除本地分支（如果没有完全合并）</p><kbd>$ git branch -D <branch-name></kbd></div><div class='alert alert-warning'><p>删除远程分支</p><kbd>$ git push origin --delete <branch-name></kbd></div>",
+            "text": "<div class='alert alert-warning'><p>获取远程分支</p><kbd>$ git checkout-b local-name origin/remote-name</kbd></br><kbd>$ git fetch origin master:page-one</kbd></div><div class='alert alert-warning'><p>查看本地用户名和邮箱</p><kbd>$ git config user.name</br>$ git config user.email</kbd></div><div class='alert alert-success'><p>修改URL地址：（修改前请查看远程地址：$git remote-v）</p><kbd>$ git remote set-url origin http://github.com/...</kbd></div><div class='alert alert-danger'><p>删除本地分支</p><kbd>$ git branch-d<branch-name></kbd></div><div class='alert alert-danger'><p>强行删除本地分支（如果没有完全合并）</p><kbd>$ git branch-D<branch-name></kbd></div><div class='alert alert-danger'><p>删除远程分支</p><kbd>$ git push origin--delete<branch-name></kbd></div>",
             "link": null
         },
         {
@@ -61,11 +61,11 @@
         },
         {
             "id":7,
-            "title":"ES2015",
-            "subtitle":"this is about ES2015...",
+            "title":"Javascript ES6",
+            "subtitle":"this is about ES6...",
             "avatar":"./assets/img/es2015.jpg",
             "introduction": "<p class='text-center'>this is about ES2015 introduction</p>",
-            "text": "addada",
+            "text": "<h3 class='display-5'>-Symbol()</h3><p>翻译：符号</p><p>解释：Symbol值通过Symbol函数生成，凡是属性名属于Symbol类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。</p><p>应用：</p><div class='card'><div class='card-block'>let s=Sympol();</br>typeof s;</br>&frasl;&frasl;“symbol”</div></div><h3 class='display-5'>-Set()</h3><p>解释：它类似于数组，但是成员的值都是唯一的，没有重复的值。</br>应用：</p><div class='card'><div class='card-block'>const s=<kbd>new Set()</kbd>;</br>[2,3,4,5,5,4,2,2].forEach(x=>s.add(x))</br>for(let i of s){</br>&nbsp;&nbsp;console.log(i);&nbsp;&nbsp;&frasl;&frasl;2,3,4,5</br>}</br>&frasl;&frasl;2,3,4,5</br></div></div><h3 class='display-5'>-Map()</h3><p>解释：它类似于对象，也是键值对的集合，但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。</br>应用：</p><div class='card'><div class='card-block'><pre>const map=<kbd>new Map()</kbd>;</br>map</br>&nbsp;.set(k1,'aaa')</br>&nbsp;.set(k2,'bbb');</br></br>map.get(k1);//'aaa'</br>map.get(k2);//'bbb'</pre></div></div><h3 class='display-5'>-Promise()</br></h3><p>解释：Promise对象是一个构造函数，用来生成Promise实例。</br>应用：</br></p><div class='card'><div class='card-block'><pre>let promise=new Promise(function(resolve,reject){</br>&nbsp;if(/**异步操作成功*/){</br>&nbsp;&nbsp;&nbsp;resolve(value);</br>&nbsp;}else{</br>&nbsp;&nbsp;&nbsp;reject(error);</br>&nbsp;}</br>})</br>promise.then(function(value){},function(error){})</br></pre></div></div><h3 class='display-5'>-class</h3><p>解释：通过class关键字，可以定义类</br>应用：</p><div class='card'><div class='card-block'><pre>class Point {}</br>等同于</br>class Point {</br>&nbsp;constructor(){}</br>}</br></br>class Point{</br>&nbsp;constructor(x,y){</br>&nbsp;&nbsp;&nbsp;&nbsp;this.x = x;</br>&nbsp;&nbsp;&nbsp;&nbsp;this.y = y;</br>&nbsp;}</br>&nbsp;toString(){</br>&nbsp;&nbsp;&nbsp;&nbsp;return '(' + this.x + ',' + this.y + ')'</br>&nbsp;&nbsp;}</br>}</br></br>var point = new Point(2,3);</br>point.toString();&nbsp;&nbsp;&nbsp;&nbsp;//(2,3)</pre></div></div><h3 class='display-5'>-for(let of){}</br></h3><p>使用对象：[...array]</br>解释：它就是for-of循环，它既比传统的for循环简洁，同时弥补了forEach和for-in循环的短板。</br>应用：</br></p><div class='card'><div class='card-block'><pre>let num=[10,20,30];</br><kbd>for(let value of num)</kbd>{</br>&nbsp;console.log(value);</br>}</br>//10</br>//20</br>//30</br></pre></div></div>",
             "link": null
         },
         {
@@ -90,9 +90,18 @@
             "id":10,
             "title":"Test-E2E",
             "subtitle":"this is about E2E...",
-            "avatar":"./assets/img/mysql.jpg",
+            "avatar":"./assets/img/protractor.jpg",
             "introduction": "<p class='text-center'>this is about E2E introduction</p>",
             "text": "E2E...",
+            "link": null
+        },
+        {
+            "id":11,
+            "title":"Javascript ES5",
+            "subtitle":"this is about ES5...",
+            "avatar":"./assets/img/javaScript1.jpg",
+            "introduction": "<p class='text-center'>this is about ES5 introduction</p>",
+            "text": "<h3 class='display-5'>-split()</br></h3><p>使用对象：string</br>解释：将字符串转换为数组。</br>应用：</br></p><div class='card'><div class='card-block'><pre>var string='Lionel-blog';</br>var array=<kbd>string.split('-')</kbd>;</br>console.log(array);</br>//['Lionel', 'blog']</br></pre></div></div><h3 class='display-5'>-join()</br></h3><p>使用对象：string</br>解释：将数组转换为字符串。</br>应用：</br></p><div class='card'><div class='card-block'><pre>var array=['a','b','c'];</br>var string=<kbd>array.join('-')</kbd>;</br>console.log(string);</br>//'a-b-c'</br></pre></div></div><h3 class='display-5'>-map()</br></h3><p>使用对象：[...array]</br>解释：遍历数组，作出处理，并返回一个新的数组。</br>应用：</br></p><div class='card'><div class='card-block'><pre>var array=['aaa','bbb','ccc'];</br>var newArray=array.<kbd>map(function(word){word&&'888'})</kbd>;</br>console.log(newArray);</br>//['888', '888', '888']</br></pre></div></div><h3 class='display-5'>-forEach()</br></h3><p>使用对象：[...array]</br>解释：遍历数组，同map()方法一样。</br>应用：</br></p><div class='card'><div class='card-block'><pre>var array=['aaa','bbb','ccc'];</br>array.<kbd>forEach(function(word){console.log(word)})</kbd>;</br>//'aaa'</br>//'bbb'</br>//'ccc'</br></pre></div></div><h3 class='display-5'>-for(var in)</br></h3><p>使用对象：{obj}</br>解释：or-in循环实际是为循环”enumerable“对象而设计的。</br>应用：</br></p><div class='card'><div class='card-block'><pre>var obj={a:1,b:2,c:3};</br>for(prop in obj){</br>&nbsp;console.log('obj.'+prop+'='+obj.prop);</br>}</br>//'obj.a=1'</br>//'obj.b=2'</br>//'obj.c=3'</br></pre></div></div>",
             "link": null
         }
     ]
