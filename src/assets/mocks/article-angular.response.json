@@ -20,6 +20,14 @@
             "subtitle": "this is about Git introduction...",
             "text": "<div>start end...</div>",
             "link": null
+        },
+        {
+            "id":3,
+            "title":"ngOnChanges",
+            "avatar":"./assets/img/git_img.png",
+            "subtitle": "this is about ngOnChanges...",
+            "text": "<div>ngOnChanges...</div>",
+            "link": null
         }
     ]
 }
