@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { AuthService } from './../../theme/services/authService/auth.service';
     styleUrls: ['./login.component.scss']
 })
 
-export class LoginComponent implements OnInit, OnChanges{
+export class LoginComponent implements OnInit{
     public submitted: boolean = false;
     public email:AbstractControl;
     public password:AbstractControl;
