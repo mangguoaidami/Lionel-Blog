@@ -19,7 +19,7 @@
             "title":"Angular2",
             "subtitle": "this is about Angular2...",
             "avatar":"./assets/img/angular2_img.png",
-            "introduction": "this is about Angular2 introduction...",
+            "introduction": "Angular 2是一个伟大的新框架，在构建我们的应用程序时为我们提供了极大的灵活性和强大的功能。在本站当中，你可能觉得除了起步介绍外，其他知识十分琐碎，但是使用当中它们是相互依赖的，列表当中是方便相关知识的查阅，特别是哪里有报错可以方便切入知识来进一步解决。",
             "text": "<img class='img-fluid ng-banner' src='./../../../assets/img/overview2.png' alt='angular2'><div class='row ng-article'><div class='col-sm-6'><img class='img-fluid' src='./../../../assets/img/speed1.svg' alt=''></div><div class='col-sm-6'><h3>开发跨平台应用</h3><p>学习通过Angular来构建应用程序，并重复利用你的代码和能力来构建可在任何平台上部署的应用。这些平台可以是PC站点、移动站点、PC本地应用和移动本地应用等。</p></div></div><div class='row'><div class='col-sm-6'><h3>速度与性能</h3><p>实现当前Web平台最大可能的速度，并更近一步提升，通过Web Worker和服务端渲染技术。 Angular让你在扩展性上可以控制。比如说，通过RxJS、Immutable.js或者其他推模式建立数据模型来满足大数据需求。</p></div><div class='col-sm-6'><img class='img-fluid' src='./../../../assets/img/speed2.svg' alt=''></div></div><div class='row'><div class='col-sm-6'><img class='img-fluid' src='./../../../assets/img/speed3.png' alt=''></div><div class='col-sm-6'><h3>难以置信的工具</h3><p>通过简单的声明模板快速构建特性。通过你自己的组件和利用大量现有组件，扩展模板语言。在几乎所有的IDE和编辑器里可以立即获得针对Angular的帮助和提示。当这一切在一起，你可以将注意力集中在如何打造你惊艳的App上面，而不是尝试如何使代码工作。</p></div></div><div class='row'><div class='col-sm-6'><h3>众多粉丝的喜爱</h3><p>从原型开始到最后的全球上线部署，Angular提供了富有生产力和可扩展性的基础设施来支持Google大量的应用。</p></div><div class='col-sm-6'><img class='img-fluid' src='./../../../assets/img/speed4.png' alt=''></div></div>",
             "link": "/pages/articleangular"
         },
