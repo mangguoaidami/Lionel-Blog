@@ -1,13 +1,13 @@
 # Lionel Blog Framework based on Angular 2, Bootstrap 4 and Typescript
 
-The simple of blog, just get up and running with Angular 2. 
+The simple of blog, just get up and running with Angular 2.
 
 
 ### main view
 
-<a target="_blank" href="http://"><img src="http://bxw2359200396.my3w.com/images/WechatIMG93.jpeg" width="600" alt="yellow theme"/></a>
+<a target="_blank" href="http://"><img src="http://lionelzhang.top/oss/WechatIMG29.jpeg" width="600" alt="yellow theme"/></a>
 
-<a target="_blank" href="http://bxw2359200396.my3w.com/">Online</a>
+<a target="_blank" href="http://www.lionelzhang.top">Online</a>
 
 ## Features
 * TypeScript
