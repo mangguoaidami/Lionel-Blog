@@ -1,7 +1,28 @@
-<div *ngIf="article">
+<div *ngIf="article" class="article">
     <p class="display-4 text-center">{{ article.title | json }}</p>
-    <a [routerLink]="[article.link]" class="btn btn-outline-warning btn-lg btn-block" *ngIf="article.link">content</a>
+    <a [routerLink]="[article.link]" class="btn btn-outline-warning btn-lg btn-block" *ngIf="article.link">Quick query</a>
     <!-- <p class="lead text-center">{{ article.introduction }}</p> -->
     <div [innerHTML]="article.introduction"></div>
-    <div [innerHTML]="article.text"></div>
+    <div [innerHTML]="pagedItems"></div>
+
+    <!-- pager -->
+    <nav aria-label="Page navigation example">
+            <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+                <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+                    <a (click)="setPage(1)" class="page-link" href="javascript:void(0);">First</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+                    <a (click)="setPage(pager.currentPage - 1)" class="page-link" href="javascript:void(0);">Previous</a>
+                </li>
+                <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+                    <a (click)="setPage(page)" class="page-link" href="javascript:void(0);">{{page}}</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+                    <a (click)="setPage(pager.currentPage + 1)" class="page-link" href="javascript:void(0);">Next</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+                    <a (click)="setPage(pager.totalPages)" class="page-link" href="javascript:void(0);">Last</a>
+                </li>
+            </ul>
+    </nav>
 </div>

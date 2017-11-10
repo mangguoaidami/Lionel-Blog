@@ -6,9 +6,18 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class SourceComponent implements OnInit{
+  public sources: object[];
 
-    // public color: string = 'linear-gradient(135deg, #ffa000 20%, #ff5000 80%)';
+  constructor(){
+    this.sources = [
+      { url: 'https://mmattozzi.github.io/cocoa-rest-client/', imgSrc: '../../../assets/img/request.png', introduction: 'A request tool.'},
+      { url: 'https://code.visualstudio.com/', imgSrc: '../../../assets/img/vscode.jpg', introduction: 'VS code'},
+      { url: 'https://nodejs.org/zh-cn/download/', imgSrc: '../../../assets/img/nodejs.jpg', introduction: 'Node Js'},
+      { url: 'https://www.iterm2.com/', imgSrc: '../../../assets/img/iterm.jpg', introduction:'Iterm 2'},
+      { url: 'https://yarnpkg.com/en/docs/getting-started', imgSrc:'../../../assets/img/feature-speed.png', introduction: 'yarn'}
+    ]
+  }
 
     ngOnInit(){}
-    
+
 }

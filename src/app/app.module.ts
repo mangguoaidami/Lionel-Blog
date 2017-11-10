@@ -12,6 +12,7 @@ import { PagesModule } from './pages/pages.module';
 import { AuthService } from './theme/services/authService/auth.service';
 import { AuthGuard } from './/theme/guards/AuthGuard';
 import { ArticleService } from './theme/services/articleService/article.service';
+import { PagerService } from './theme/services/pagerService/pager.service';
 import { NgaModule } from './theme/nga.module'
 // import { HeaderComponent } from './theme/components/header/header.component';
 import 'rxjs/add/operator/map';
@@ -19,7 +20,7 @@ import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/do';
 
 @NgModule({
-  imports: [ 
+  imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
@@ -29,14 +30,15 @@ import 'rxjs/add/operator/do';
     routing,
     NgaModule.forRoot()// import Nga modules
   ],
-  declarations: [ 
+  declarations: [
     AppComponent
   ],
-  providers: [ 
+  providers: [
     ENV_PROVIDERS,
     AuthService,
     AuthGuard,
-    ArticleService
+    ArticleService,
+    PagerService
    ],
   bootstrap: [ AppComponent ]
 })

@@ -4,6 +4,8 @@ import { ArticleService } from './../../theme/services/articleService/article.se
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx'
+
+import { PagerService } from './../../theme/services/pagerService/pager.service';
 // import { Article } from './../../theme/services/articleService/article.model';
 
 @Component({
@@ -12,9 +14,16 @@ import 'rxjs/Rx'
 })
 
 export class ArticleSigleComponent implements OnInit{
-    public article;
-    
-    constructor(private route: ActivatedRoute, private service: ArticleService){}
+    // array of all items to be paged
+    public article: string[];
+    // pager object
+    pager: any = {};
+    // paged items
+    pagedItems: any[];
+
+    constructor(private route: ActivatedRoute, private service: ArticleService, private pagerService: PagerService){
+
+    }
 
     ngOnInit(){
 
@@ -22,8 +31,23 @@ export class ArticleSigleComponent implements OnInit{
 
         this.service.getArticleSigle(id)
             .subscribe(data => {
-                this.article = data;
-                // console.log(data);
+              this.article = data;
+                this.article.innerHTML = data.string.split('<p>pages-end</p>');
+
+                // initialize to page 1
+                this.setPage(1);
         });
+    }
+
+    setPage(page: number) {
+        if (page < 1 || page > this.pager.totalPages) {
+            return;
+        }
+
+        // get pager object from service
+        this.pager = this.pagerService.getPager(this.article.innerHTML.length, page);
+
+        // get current page of items
+        this.pagedItems = this.article.innerHTML.slice(this.pager.startIndex, this.pager.endIndex + 1);
     }
 }
