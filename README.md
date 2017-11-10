@@ -5,7 +5,7 @@ The simple of blog, just get up and running with Angular 2.
 
 ### main view
 
-<a target="_blank" href="http://"><img src="http://lionelzhang.top/oss/WechatIMG29.jpeg" width="600" alt="yellow theme"/></a>
+<a target="_blank" href="http://www.lionelzhang.top"><img src="http://lionelzhang.top/oss/WechatIMG29.jpeg" width="600" alt="yellow theme"/></a>
 
 <a target="_blank" href="http://www.lionelzhang.top">Online</a>,请在控制器中查看账号密码。
 
