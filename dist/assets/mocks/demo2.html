@@ -1,13 +1,101 @@
 <img class='img-fluid ng-banner' src='./../../../assets/img/overview2.png'
 alt='angular2'>
-<p class='h3'>Angular2 fram structrue.</p>
-<iframe src='../axure_template/home.html' width='' height=''></iframe>
+<p class='h3'>
+    Angular2 fram structure.
+</p>
+<p>
+    基本的构架关系明确，上下层级依赖。做结构的应用程序，以便您可以快速找到代码，识别代码一目了然，保持Flattest结构，你可以尝试干。确定结构要遵循这四个基本指导原则，按重要性排列。
+</p>
+<div class='row'>
+    <div class='col-sm-7'>
+        <p>
+            基本构架
+        </p>
+        <img src='./../../../assets/img/angular2-structure.png' class='img-fluid'>
+        <p>
+            运用router-outlet进行布局。
+        </p>
+        <img src='./../../../assets/img/router-outlet.png' class='img-fluid'>
+    </div>
+    <div class='col-sm-5'>
+        <p>
+            文件结构
+        </p>
+        <div class='card'>
+            <div class='card-block'>
+                <p>
+                    |-config
+                    </br>
+                    |-mocks
+                    </br>
+                    &nbsp;&nbsp;|-article
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;|-article.response.json
+                    </br>
+                    &nbsp;&nbsp;|-manage
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;|-admin.response.json
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;|-user.response.json
+                    </br>
+                    |-node_modules
+                    </br>
+                    |-src
+                    </br>
+                    &nbsp;&nbsp;|-app
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;|-pages
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;|-theme
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.component.ts
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.module.ts
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.routing.ts
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.scss
+                    </br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.service.ts
+                    </br>
+                    &nbsp;&nbsp;|-assets
+                    </br>
+                    &nbsp;&nbsp;|-environments
+                    </br>
+                    &nbsp;&nbsp;|-index.html
+                    </br>
+                    &nbsp;&nbsp;|-main.ts
+                    </br>
+                    &nbsp;&nbsp;|-main.browser.ts
+                    </br>
+                    |-.gitignore
+                    </br>
+                    |-angular-cli.json
+                    </br>
+                    |-package.json
+                    </br>
+                    |-README.md
+                    </br>
+                    |-tsconfig.json //ts配置
+                    </br>
+                    |-tsconfig.webpack.json
+                    </br>
+                    |-tslint.json&nbsp;&nbsp;&nbsp;&nbsp;//用于检测ts的规范、错误
+                    </br>
+                    |-typedoc.json&nbsp;&nbsp;&nbsp;&nbsp;//ts文档生成器
+                    </br>
+                    |-webpack.config.js.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class='row ng-article'>
     <div class='col-sm-6'>
         <img class='img-fluid' src='./../../../assets/img/speed1.svg' alt=''>
     </div>
     <div class='col-sm-6'>
-        <h3>
+        <h3 class='intr_t'>
             开发跨平台应用
         </h3>
         <p>
@@ -17,11 +105,11 @@ alt='angular2'>
 </div>
 <div class='row'>
     <div class='col-sm-6'>
-        <h3>
+        <h3 class='intr_t'>
             速度与性能
         </h3>
         <p>
-            实现当前Web平台最大可能的速度，并更近一步提升，通过Web Worker和服务端渲染技术。 Angular让你在扩展性上可以控制。比如说，通过RxJS、Immutable.js或者其他推模式建立数据模型来满足大数据需求。
+            实现当前Web平台最大可能的速度，并更近一步提升，通过Web Worker和服务端渲染技术。Angular让你在扩展性上可以控制。比如说，通过RxJS、Immutable.js或者其他推模式建立数据模型来满足大数据需求。
         </p>
     </div>
     <div class='col-sm-6'>
@@ -33,7 +121,7 @@ alt='angular2'>
         <img class='img-fluid' src='./../../../assets/img/speed3.png' alt=''>
     </div>
     <div class='col-sm-6'>
-        <h3>
+        <h3 class='intr_t'>
             难以置信的工具
         </h3>
         <p>
@@ -43,7 +131,7 @@ alt='angular2'>
 </div>
 <div class='row'>
     <div class='col-sm-6'>
-        <h3>
+        <h3 class='intr_t'>
             众多粉丝的喜爱
         </h3>
         <p>
@@ -54,147 +142,206 @@ alt='angular2'>
         <img class='img-fluid' src='./../../../assets/img/speed4.png' alt=''>
     </div>
 </div>
+<p>pages-end</p>
 <div class='content'>
-  <p class='h3'>How to start:</p>
-  <p class='h5'>*Pages1</p>
-  <p class='pages1'>
-    如何构建一个Angular 2应用程序,一下有两种方法可以选择。</br>
-    一、创建一个Angular 2初学者工具包，使用Angular CLI：</br>
-    你完全可以跳过安装程序，只抓取你需要的文件。跳转到'退后一步'，直接进入Angular 2特定部分。</br>
-    你可以像这样获得一个Angular应用程序：</br>
-    <kbd>$npm install -g angular-cli</kbd></br></br>
-
-    <kbd>$ng new my-new-app</kbd></br></br>
-
-    <kbd>$cd my-new-app</kbd></br></br>
-
-    <kbd>$ng serve</kbd></br>
-    然后打开你的浏览器：<a href='javascript: void(0);'>http://localhost:4200</a></br>
-    二、直接获取angular2相关起步kit代码：</br>
-    clone URL：git clone https://github.com/mangguoaidami/angular2-starter-http.git</br>
-  </p>
-  <div class='pages2'>
-    <p class='h5'>*Pages2</p>
-    <p>
-      我们起初步骤是：</br>
-      	1、创建我们的基本项目。</br>
-      	2、建立TypeScript全局。</br>
-      	3、下载依赖包并且设置System.js。</br>
-      	4、开始搭建我们的angler2项目。</br>
-      基本结构构架如下：</br>
+    <p class='h3'>
+        How to start:
     </p>
-    <div class='card'>
-      <div class='card-block'>
-        |- app/</br>
-            |- app.component.ts     // main app component</br>
-            |- app.module.ts        // main app module</br>
-            |- main.ts              // bootstrap our app</br>
-        |- index.html</br>
-        |- package.json</br>
-        |- tsconfig.json</br>
-        |- typings.json</br>
-        |- systemjs.config.json	//System configuration for Angular 2 samples</br>
-      </div>
-    </div>
-    <p>
-      <mark>注意：这里我们使用已经配置好的库，所以省略了一下多个步骤：</mark></br>
-      创建html文本：$touch index.html</br></br>
-
-      初始化项目：$npm init —yes</br></br>
-
-      下载依赖服务：$npm install —save-dev lite-sarver</br>
-      $npm install --save-dev typescript @types/node @types/jasmine @types/core-js</br></br>
-
-      添加启动指令Package.json:</br>
-      ++	<kbd>'script': {</kbd></br>
-      	<kbd>&nbsp;&nbsp;'lite': 'lite-server',</kbd></br>
-      	<kbd>&nbsp;&nbsp;'start': 'tsc && concurrently \'npm run tsc:w\' \'npm run lite\'',</kbd></br>
-      <kbd>}</kbd></br></br>
-
-      配置tsconfig.json:</br>
-      <kbd>++'lib': [ 'es2015', 'dom' ]</kbd></br>
-      <span class='badge badge-pill badge-success'>Tips</span>….详细起步配置可以参考：<a href='https://github.com/mangguoaidami/angular2-starter-http'>angular2-starter-http</a></br>
+    <p class='h5'>
+        *Pages1
     </p>
-  </div>
-  <div class='pages3'>
-    <p class='h3'>启动本地服务</p>
-    <p><kbd>$npm start</kbd>，下面就可以开始我们的项目搭建了。值得注意的是这里使用的是typescript和es6，具体有什么变化呢？</p>
-    <div class='card' style='backgroundColor: #292b2c; color: #ffffff;'>
-      <div class='card-block'>
-        <p>
-          // typescript</br>
-          class Greeter {}</br></br>
-
-          // javascript</br>
-          var Greeter = (function() {</br>
-              function Greeter() {}</br>
-              return Greeter;</br>
-          }());</br></br>
-
-          // ==================================</br></br>
-
-          // es6</br>
-          const message = 'hello';</br></br>
-
-          // javascript</br>
-          var message = 'hello';</br></br>
-
-          // =================================</br></br>
-
-          // typescript</br>
-          function saySomething(message = 'default message') {}</br></br>
-
-          // javascript</br>
-          function saySomething(message) {</br>
-            if (message === void 0) { message = 'default message'; }</br>
-          }</br></br>
-
-          // =================================</br>
-
-          // es6</br></br>
-          const username = 'chris';</br>
-          const message = `Say hello to ${username}`;</br></br>
-
-          // javascript</br>
-          var username = 'chris';</br>
-          var message = 'Say hello to ' + username;</br>
+    <p class='pages1'>
+        如何构建一个Angular 2应用程序,一下有两种方法可以选择。
+        </br>
+        一、创建一个Angular 2初学者工具包，使用Angular CLI：
+        </br>
+        你完全可以跳过安装程序，只抓取你需要的文件。跳转到'退后一步'，直接进入Angular 2特定部分。
+        </br>
+        你可以像这样获得一个Angular应用程序：
+        </br>
+        <kbd>
+            $npm install-g angular-cli
+        </kbd>
+        </br>
+        </br>
+        <kbd>
+            $ng new my-new-app
+        </kbd>
+        </br>
+        </br>
+        <kbd>
+            $cd my-new-app
+        </kbd>
+        </br>
+        </br>
+        <kbd>
+            $ng serve
+        </kbd>
+        </br>
+        然后打开你的浏览器：
+        <a href='javascript:void(0);'>
+            http://localhost:4200
+        </a>
+        </br>
+        二、直接获取angular2相关起步kit代码：
+        </br>
+        clone URL：git clone https:
+    </p>
+    <div class='pages2'>
+        <p class='h5'>
+            *Pages2
         </p>
         <p>
-            |-config</br>
-            |-mocks</br>
-            &nbsp;&nbsp;|-article</br>
-            &nbsp;&nbsp;&nbsp;&nbsp;|-article.response.json</br>
-            &nbsp;&nbsp;|-manage</br>
-            &nbsp;&nbsp;&nbsp;&nbsp;|-admin.response.json</br>
-            &nbsp;&nbsp;&nbsp;&nbsp;|-user.response.json</br>
-            |-node_modules</br>
-            |-src
-            &nbsp;&nbsp;|-app</br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-pages</br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-theme</br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.component.ts</br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.module.ts</br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.routing.ts</br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.scss</br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.service.ts</br>
-                &nbsp;&nbsp;|-assets</br>
-                &nbsp;&nbsp;|-environments</br>
-                &nbsp;&nbsp;|-index.html</br>
-                &nbsp;&nbsp;|-main.ts</br>
-                &nbsp;&nbsp;|-main.browser.ts</br>
-            |-.gitignore</br>
-            |-angular-cli.json		//</br>
-            |-package.json</br>
-            |-README.md</br>
-            |-tsconfig.json		//ts配置</br>
-            |-tsconfig.webpack.json</br>
-            |-tslint.json		//用于检测ts的规范、错</br>误
-            |-typedoc.json		//ts文档生成器</br>
-            |-webpack.config.js. //webpack</br>
+            我们起初步骤是：
+            </br>
+            1、创建我们的基本项目。
+            </br>
+            2、建立TypeScript全局。
+            </br>
+            3、下载依赖包并且设置System.js。
+            </br>
+            4、开始搭建我们的angler2项目。
+            </br>
+            基本结构构架如下：
+            </br>
         </p>
-
-      </div>
+        <div class='card'>
+            <div class='card-block'>
+                |-app/
+                </br>
+                |-app.component.ts|-app.module.ts|-main.ts|-index.html
+                </br>
+                |-package.json
+                </br>
+                |-tsconfig.json
+                </br>
+                |-typings.json
+                </br>
+                |-systemjs.config.json
+            </div>
+        </div>
+        <p>
+            <mark>
+                注意：这里我们使用已经配置好的库，所以省略了一下多个步骤：
+            </mark>
+            </br>
+            创建html文本：$touch index.html
+            </br>
+            </br>
+            初始化项目：$npm init—yes
+            </br>
+            </br>
+            下载依赖服务：$npm install—save-dev lite-sarver
+            </br>
+            $npm install--save-dev typescript @types/node @types/jasmine @types/core-js
+            </br>
+            </br>
+            添加启动指令Package.json:
+            </br>
+            ++
+            <kbd>
+                'script':{
+            </kbd>
+            </br>
+            <kbd>
+                &nbsp;&nbsp;'lite':'lite-server',
+            </kbd>
+            </br>
+            <kbd>
+                &nbsp;&nbsp;'start':'tsc && concurrently \\'npm run tsc:w\\' \\'npm run
+                lite\\'',
+            </kbd>
+            </br>
+            <kbd>
+                }
+            </kbd>
+            </br>
+            </br>
+            配置tsconfig.json:
+            </br>
+            <kbd>
+                ++'lib':['es2015','dom']
+            </kbd>
+            </br>
+            <span class='badge badge-pill badge-success'>
+                Tips
+            </span>
+            ….详细起步配置可以参考：
+            <a href='https://github.com/mangguoaidami/angular2-starter-http'>
+                angular2-starter-http
+            </a>
+            </br>
+        </p>
     </div>
-  </div>
-
+    <p>pages-end</p>
+    <div class='pages3'>
+        <p class='h3'>
+            启动本地服务
+        </p>
+        <p>
+            <kbd>
+                $npm start
+            </kbd>
+            ，下面就可以开始我们的项目搭建了。值得注意的是这里使用的是typescript和es6，具体有什么变化呢？
+        </p>
+        <div class='card' style='backgroundColor: #292b2c; color: #ffffff;'>
+            <div class='card-block'>
+                <p>
+                    // typescript
+                    </br>
+                    class Greeter{}
+                    </br>
+                    </br>
+                    // javascript
+                    </br>
+                    var Greeter=(function(){
+                    </br>
+                    function Greeter(){}
+                    </br>
+                    return Greeter;
+                    </br>
+                    }());
+                    </br>
+                    </br>
+                    //es6
+                    </br>
+                    const message='hello';
+                    </br>
+                    </br>
+                    //javascript
+                    </br>
+                    var message='hello';
+                    </br>
+                    </br>
+                    // typescript
+                    </br>
+                    function saySomething(message='default message'){}
+                    </br>
+                    </br>
+                    // javascript
+                    </br>
+                    function saySomething(message){
+                    </br>
+                    if(message===void 0){message='default message'}
+                    </br>
+                    }
+                    </br>
+                    </br>
+                    //es6
+                    </br>
+                    const username='chris';
+                    </br>
+                    const message=`Say hello to ${username}`;
+                    </br>
+                    </br>
+                    //javascript
+                    </br>
+                    var username='chris';
+                    </br>
+                    var message='Say hello to '+username;
+                    </br>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>

@@ -15,7 +15,7 @@ import { PagerService } from './../../theme/services/pagerService/pager.service'
 
 export class ArticleSigleComponent implements OnInit{
     // array of all items to be paged
-    public article: string[];
+    public article: any = {};
     // pager object
     pager: any = {};
     // paged items
