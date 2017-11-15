@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
     selector: 'pages',
@@ -6,11 +6,6 @@ import { Component, OnInit } from "@angular/core";
     templateUrl: './pages.component.html'
 })
 
-export class PagesComponent implements OnInit{
-
-    ngOnInit(){
-        // var div = this.elRef.nativeElement.querySelector('button');
-    }
-
-    
+export class PagesComponent {
+  constructor() {}
 }
