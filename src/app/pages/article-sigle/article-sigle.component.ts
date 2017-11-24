@@ -17,18 +17,15 @@ export class ArticleSigleComponent implements OnInit{
     // array of all items to be paged
     public article: any = {};
     // pager object
-    pager: any = {};
+    public pager: any = {};
     // paged items
-    pagedItems: any[];
+    public pagedItems: any[];
 
-    constructor(private route: ActivatedRoute, private service: ArticleService, private pagerService: PagerService){
-
-    }
+    constructor(private route: ActivatedRoute, private service: ArticleService, private pagerService: PagerService){}
 
     ngOnInit(){
-
+        //get pages route's ID
         let id = this.route.snapshot.params['id'];
-
         this.service.getArticleSigle(id)
             .subscribe(data => {
               this.article = data;

@@ -18,4 +18,6 @@ The simple of blog with Angular 4.🔥 🔥 🔥 🔥
 * Sass
 * Angular 4
 * jQuery
+* E2E (Protractor)
+* Plugin of ng2-slim-loading-bar
 * and many more!

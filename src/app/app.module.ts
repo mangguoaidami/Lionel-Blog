@@ -1,3 +1,4 @@
+/**import Angular core module 🎆 🎆 🎆 🎆 🎆 🎆 */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
@@ -14,7 +15,7 @@ import { AuthService } from './theme/services/authService/auth.service';
 import { AuthGuard } from './/theme/guards/AuthGuard';
 import { ArticleService } from './theme/services/articleService/article.service';
 import { PagerService } from './theme/services/pagerService/pager.service';
-import { NgaModule } from './theme/nga.module'
+import { NgaModule } from './theme/nga.module';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/do';

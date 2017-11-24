@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { HeaderComponent, FooterComponent } from './components';
-// import { SlimLoadingBarService } from './components/slim-loading-bar/slim-loading-bar.service';
 
 const NGA_COMPONENTS = [
     HeaderComponent,
     FooterComponent
 ]
+
 @NgModule({
     imports: [ CommonModule, RouterModule ],
     declarations: [ ...NGA_COMPONENTS ],
