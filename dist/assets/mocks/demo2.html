@@ -1,347 +1,56 @@
-<img class='img-fluid ng-banner' src='./../../../assets/img/overview2.png'
-alt='angular2'>
-<p class='h3'>
-    Angular2 fram structure.
+<div class='artical'>
+  <h3 class='display-5'>-构建优化器</br></h3>
+  <p>
+    从5.0.0开始，使用CLI创建的生产版本现在将默认应用生成优化器。
+构建优化器是一个包含在我们的CLI中的工具，通过对您的Angular应用程序的语义理解，使您的bundle变小。</br>
+构建优化器有两个主要的工作。首先，我们可以将应用程序的某些部分标记为纯粹的，这样可以改善现有工具提供的树震动，从而删除不需要的应用程序的其他部分。
+构建优化器所做的第二件事是从您的应用程序的运行时代码中删除Angular装饰器。装饰器由编译器使用，在运行时不需要，可以删除。这些作业中的每一个都会减少JavaScript包的大小，并为用户提高应用程序的启动速度。</br>
+  </p>
+  <h3 class='display-5'>-有角的通用状态转移API和DOM支持</br></h3>
+  <p>
+    现在，您可以更轻松地在应用程序的服务器端和客户端版本之间共享应用程序状态。</br>
+Angular Universal是一个专注于帮助开发人员执行Angular应用程序的服务器端呈现（SSR）的项目。通过在服务器上呈现您的Angular应用程序，然后在生成的HTML之上进行引导，您可以添加对不支持JavaScript的抓取工具和抓取工具的支持，并且可以提高应用程序的感知性能。</br>
+ServerTransferStateModule和相应的BrowserTransferStateModule。此模块允许您在平台服务器中生成信息作为渲染的一部分，然后将其传输到客户端，以便不需要重新生成该信息。这对于您的应用程序通过HTTP获取数据的情况很有用。通过从服务器传输状态，这意味着开发人员不需要在应用程序将其发送到客户端时发出第二个HTTP请求。国家转移的文件在接下来的几周即将出版。</br>
+来自Angular Universal团队的另一个变化是将Domino添加到平台服务器。 Domino意味着我们在服务器端上下文中支持更多的DOM操作，从而改进了对不支持服务器端的第三方JS和组件库的支持。</br>
+  </p>
+  <h3 class='display-5'>-编译器改进</br></h3>
+  <p>我们改进了Angular编译器来支持渐进式编译。这提供了更快的重建，特别是对于生产构建和使用AOT构建。我们还为装饰者添加了功能，并通过删除空格来发送更小的捆绑包。</br></p>
+  <h3 class='display-5'>-TypeScript转换</br></h3>
+  <p>在引擎盖下，Angular编译器现在作为TypeScript转换工具运行，使增量重建速度显着提高。 TypeScript变换是作为TypeScript 2.3的一部分引入的一项新功能，它允许我们挂接到标准的TypeScript编译管道。</br>
+您可以通过在打开AOT标志的情况下运行ng服务来利用此优势。</p>
+<kbd>$ng serve —aot</kbd></br>
+<p>我们建议大家试试这个。这将成为CLI未来版本的默认设置。有超过一千个组件的项目有一些已知的速度问题。我们希望确保各种规模的项目都能体验到这些改进。</br>
+当执行https://angular.io的增量AOT构建时，新的编译器管道可以节省95％的构建时间（从开发机器上的40秒到不到2秒）。</br>
+我们的目标是使AOT编译速度足够快，以便开发人员可以将其用于开发，消除开发人员第一次尝试投入生产时所遇到的差异。该团队已经达到了2秒的增量AOT重建性能目标，并将在未来的CLI版本中默认开启AOT。</br>
+作为转换过程的一部分，我们不再需要genDir了，而outDir已经改变了：现在我们总是发出node_modules中包的生成文件。</br></p>
+  <h3 class='display-5'>-保留空白</br></h3>
+  <p>从历史上看，模板中的制表符，换行符和空格已经由编译器忠实地重新创建并包含在构建中。您现在可以选择是否保留来自组件和应用程序的空白。</br>
+您可以将其指定为每个组件的装饰器的一部分，其中当前默认为true。</br></p>
+<kbd>
+@Component({</br>
+  &nbsp;&nbsp;templateUrl: ‘about.component.html’,</br>
+  &nbsp;&nbsp;preserveWhitespaces: false</br>
+})</br>
+Export class AboutComponent {}</br>
+</kbd>
+<p>或者你可以在你的tsconfig.json中指定它的应用程序范围，它当前也默认为true。</br>
 </p>
-<p>
-    基本的构架关系明确，上下层级依赖。做结构的应用程序，以便您可以快速找到代码，识别代码一目了然，保持Flattest结构，你可以尝试干。确定结构要遵循这四个基本指导原则，按重要性排列。
-</p>
-<div class='row'>
-    <div class='col-sm-7'>
-        <p>
-            基本构架
-        </p>
-        <img src='./../../../assets/img/angular2-structure.png' class='img-fluid'>
-        <p>
-            运用router-outlet进行布局。
-        </p>
-        <img src='./../../../assets/img/router-outlet.png' class='img-fluid'>
-    </div>
-    <div class='col-sm-5'>
-        <p>
-            文件结构
-        </p>
-        <div class='card'>
-            <div class='card-block'>
-                <p>
-                    |-config
-                    </br>
-                    |-mocks
-                    </br>
-                    &nbsp;&nbsp;|-article
-                    </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-article.response.json
-                    </br>
-                    &nbsp;&nbsp;|-manage
-                    </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-admin.response.json
-                    </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-user.response.json
-                    </br>
-                    |-node_modules
-                    </br>
-                    |-src
-                    </br>
-                    &nbsp;&nbsp;|-app
-                    </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-pages
-                    </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-theme
-                    </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.component.ts
-                    </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.module.ts
-                    </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.routing.ts
-                    </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.scss
-                    </br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;|-app.service.ts
-                    </br>
-                    &nbsp;&nbsp;|-assets
-                    </br>
-                    &nbsp;&nbsp;|-environments
-                    </br>
-                    &nbsp;&nbsp;|-index.html
-                    </br>
-                    &nbsp;&nbsp;|-main.ts
-                    </br>
-                    &nbsp;&nbsp;|-main.browser.ts
-                    </br>
-                    |-.gitignore
-                    </br>
-                    |-angular-cli.json
-                    </br>
-                    |-package.json
-                    </br>
-                    |-README.md
-                    </br>
-                    |-tsconfig.json //ts配置
-                    </br>
-                    |-tsconfig.webpack.json
-                    </br>
-                    |-tslint.json&nbsp;&nbsp;&nbsp;&nbsp;//用于检测ts的规范、错误
-                    </br>
-                    |-typedoc.json&nbsp;&nbsp;&nbsp;&nbsp;//ts文档生成器
-                    </br>
-                    |-webpack.config.js.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class='row ng-article'>
-    <div class='col-sm-6'>
-        <img class='img-fluid' src='./../../../assets/img/speed1.svg' alt=''>
-    </div>
-    <div class='col-sm-6'>
-        <h3 class='intr_t'>
-            开发跨平台应用
-        </h3>
-        <p>
-            学习通过Angular来构建应用程序，并重复利用你的代码和能力来构建可在任何平台上部署的应用。这些平台可以是PC站点、移动站点、PC本地应用和移动本地应用等。
-        </p>
-    </div>
-</div>
-<div class='row'>
-    <div class='col-sm-6'>
-        <h3 class='intr_t'>
-            速度与性能
-        </h3>
-        <p>
-            实现当前Web平台最大可能的速度，并更近一步提升，通过Web Worker和服务端渲染技术。Angular让你在扩展性上可以控制。比如说，通过RxJS、Immutable.js或者其他推模式建立数据模型来满足大数据需求。
-        </p>
-    </div>
-    <div class='col-sm-6'>
-        <img class='img-fluid' src='./../../../assets/img/speed2.svg' alt=''>
-    </div>
-</div>
-<div class='row'>
-    <div class='col-sm-6'>
-        <img class='img-fluid' src='./../../../assets/img/speed3.png' alt=''>
-    </div>
-    <div class='col-sm-6'>
-        <h3 class='intr_t'>
-            难以置信的工具
-        </h3>
-        <p>
-            通过简单的声明模板快速构建特性。通过你自己的组件和利用大量现有组件，扩展模板语言。在几乎所有的IDE和编辑器里可以立即获得针对Angular的帮助和提示。当这一切在一起，你可以将注意力集中在如何打造你惊艳的App上面，而不是尝试如何使代码工作。
-        </p>
-    </div>
-</div>
-<div class='row'>
-    <div class='col-sm-6'>
-        <h3 class='intr_t'>
-            众多粉丝的喜爱
-        </h3>
-        <p>
-            从原型开始到最后的全球上线部署，Angular提供了富有生产力和可扩展性的基础设施来支持Google大量的应用。
-        </p>
-    </div>
-    <div class='col-sm-6'>
-        <img class='img-fluid' src='./../../../assets/img/speed4.png' alt=''>
-    </div>
-</div>
-<p>pages-end</p>
-<div class='content'>
-    <p class='h3'>
-        How to start:
-    </p>
-    <p class='h5'>
-        *Pages1
-    </p>
-    <p class='pages1'>
-        如何构建一个Angular 2应用程序,一下有两种方法可以选择。
-        </br>
-        一、创建一个Angular 2初学者工具包，使用Angular CLI：
-        </br>
-        你完全可以跳过安装程序，只抓取你需要的文件。跳转到'退后一步'，直接进入Angular 2特定部分。
-        </br>
-        你可以像这样获得一个Angular应用程序：
-        </br>
-        <kbd>
-            $npm install-g angular-cli
-        </kbd>
-        </br>
-        </br>
-        <kbd>
-            $ng new my-new-app
-        </kbd>
-        </br>
-        </br>
-        <kbd>
-            $cd my-new-app
-        </kbd>
-        </br>
-        </br>
-        <kbd>
-            $ng serve
-        </kbd>
-        </br>
-        然后打开你的浏览器：
-        <a href='javascript:void(0);'>
-            http://localhost:4200
-        </a>
-        </br>
-        二、直接获取angular2相关起步kit代码：
-        </br>
-        clone URL：git clone https:
-    </p>
-    <div class='pages2'>
-        <p class='h5'>
-            *Pages2
-        </p>
-        <p>
-            我们起初步骤是：
-            </br>
-            1、创建我们的基本项目。
-            </br>
-            2、建立TypeScript全局。
-            </br>
-            3、下载依赖包并且设置System.js。
-            </br>
-            4、开始搭建我们的angler2项目。
-            </br>
-            基本结构构架如下：
-            </br>
-        </p>
-        <div class='card'>
-            <div class='card-block'>
-                |-app/
-                </br>
-                |-app.component.ts|-app.module.ts|-main.ts|-index.html
-                </br>
-                |-package.json
-                </br>
-                |-tsconfig.json
-                </br>
-                |-typings.json
-                </br>
-                |-systemjs.config.json
-            </div>
-        </div>
-        <p>
-            <mark>
-                注意：这里我们使用已经配置好的库，所以省略了一下多个步骤：
-            </mark>
-            </br>
-            创建html文本：$touch index.html
-            </br>
-            </br>
-            初始化项目：$npm init—yes
-            </br>
-            </br>
-            下载依赖服务：$npm install—save-dev lite-sarver
-            </br>
-            $npm install--save-dev typescript @types/node @types/jasmine @types/core-js
-            </br>
-            </br>
-            添加启动指令Package.json:
-            </br>
-            ++
-            <kbd>
-                'script':{
-            </kbd>
-            </br>
-            <kbd>
-                &nbsp;&nbsp;'lite':'lite-server',
-            </kbd>
-            </br>
-            <kbd>
-                &nbsp;&nbsp;'start':'tsc && concurrently \\'npm run tsc:w\\' \\'npm run
-                lite\\'',
-            </kbd>
-            </br>
-            <kbd>
-                }
-            </kbd>
-            </br>
-            </br>
-            配置tsconfig.json:
-            </br>
-            <kbd>
-                ++'lib':['es2015','dom']
-            </kbd>
-            </br>
-            <span class='badge badge-pill badge-success'>
-                Tips
-            </span>
-            ….详细起步配置可以参考：
-            <a href='https://github.com/mangguoaidami/angular2-starter-http'>
-                angular2-starter-http
-            </a>
-            </br>
-        </p>
-    </div>
-    <p>pages-end</p>
-    <div class='pages3'>
-        <p class='h3'>
-            启动本地服务
-        </p>
-        <p>
-            <kbd>
-                $npm start
-            </kbd>
-            ，下面就可以开始我们的项目搭建了。值得注意的是这里使用的是typescript和es6，具体有什么变化呢？
-        </p>
-        <div class='card' style='backgroundColor: #292b2c; color: #ffffff;'>
-            <div class='card-block'>
-                <p>
-                    // typescript
-                    </br>
-                    class Greeter{}
-                    </br>
-                    </br>
-                    // javascript
-                    </br>
-                    var Greeter=(function(){
-                    </br>
-                    function Greeter(){}
-                    </br>
-                    return Greeter;
-                    </br>
-                    }());
-                    </br>
-                    </br>
-                    //es6
-                    </br>
-                    const message='hello';
-                    </br>
-                    </br>
-                    //javascript
-                    </br>
-                    var message='hello';
-                    </br>
-                    </br>
-                    // typescript
-                    </br>
-                    function saySomething(message='default message'){}
-                    </br>
-                    </br>
-                    // javascript
-                    </br>
-                    function saySomething(message){
-                    </br>
-                    if(message===void 0){message='default message'}
-                    </br>
-                    }
-                    </br>
-                    </br>
-                    //es6
-                    </br>
-                    const username='chris';
-                    </br>
-                    const message=`Say hello to ${username}`;
-                    </br>
-                    </br>
-                    //javascript
-                    </br>
-                    var username='chris';
-                    </br>
-                    var message='Say hello to '+username;
-                    </br>
-                </p>
-            </div>
-        </div>
-    </div>
+<kbd>“angularCompilerOptions”: {</br>
+	&nbsp;&nbsp;“preserveWhitespaces”: false</br>
+}</br></kbd>
+<p>一般来说，组件级别的规范覆盖了应用程序范围的规范。将来，团队希望默认为false，以节省开发人员的空间。不要担心你的<code><pre></code>标签，这些标签是智能处理的。</br>
+在我们的文档站点阅读更多有关`preserveWhitespaces`的信息。</br>
+改进的装饰者支持</br>
+我们现在支持lambda表达式的装饰器中的表达式降低以及对象文字中useValue，useFactory和数据的值。这使您可以使用装饰器中运行时只能计算的值来降低表达式。</br>
+您现在可以使用lambda代替命名函数，这意味着您可以执行代码而不会影响d.ts或公共API。</br></p>
+<kbd>Component({</br>
+  &nbsp;&nbsp;provider: [{provide: SOME_TOKEN, useFactory: () => null}]</br>
+})</br>
+export class MyClass {}</br></kbd>
+  <h3 class='display-5'>-国际化的号码，日期和货币管道</br></h3>
+  <p>
+我们已经建立了新的号码，日期和货币管道，增加了浏览器的标准化，并消除了对国际化的填充需求。</br>
+在Angular中，我们依靠浏览器使用浏览器i18n API提供数字，日期和货币格式。这导致了大多数开发人员需要使用polyfill，这意味着用户在浏览器中看到的结果不一致，并且我们收到了常见格式（如货币管道）不符合开箱即用的意见的评论。</br>
+在5.0.0版本中，我们更新了管道以使用我们自己的实现，依靠CLDR为您想要支持的任何语言环境提供大量的语言环境支持和配置。我们已经制作了一个比较v4和v5之间管道行为的文档。</br></p>
+
 </div>

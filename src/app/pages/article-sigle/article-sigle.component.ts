@@ -32,7 +32,8 @@ export class ArticleSigleComponent implements OnInit{
         this.service.getArticleSigle(id)
             .subscribe(data => {
               this.article = data;
-                this.article.innerHTML = data.string.split('<p>pages-end</p>');
+                this.article.innerHTML = data.string.split('🔚');
+                console.log(this.article);
 
                 // initialize to page 1
                 this.setPage(1);
