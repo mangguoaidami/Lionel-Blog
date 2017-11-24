@@ -1,6 +1,6 @@
-# Lionel Blog Framework based on Angular 2, Bootstrap 4 and Typescript
+# Lionel Blog Framework based on Angular 4, Bootstrap 4 and Typescript
 
-The simple of blog with Angular 2.🔥 🔥 🔥 🔥
+The simple of blog with Angular 4.🔥 🔥 🔥 🔥
 
 
 ### main view
@@ -16,6 +16,6 @@ The simple of blog with Angular 2.🔥 🔥 🔥 🔥
 * High resolution
 * Bootstrap 4 CSS Framework
 * Sass
-* Angular 2
+* Angular 4
 * jQuery
 * and many more!
