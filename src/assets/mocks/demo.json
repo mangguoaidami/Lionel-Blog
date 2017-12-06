@@ -1,0 +1,32 @@
+{ "text": "<div> 
+    <div> 
+        <strong>Tips!</strong>
+        All notes from original 
+        <a href='https://www.youtube.com/watch?v=2LCo926NFLI'>YouTube</a>
+    </div>
+    <h3 class='display-5'>Let start! 🎉</br></h3>
+    <br/>
+    <p>直接引入Rxjs的CDN，撒</p>
+    <img src='./../../../assets/img/rxjs/createOberver.jpg' class='img-fluid' alt='rxjs capter'>
+    <p>Rxjs 事件 fromEvent</p>
+    <img src='./../../../assets/img/rxjs/observableFromEvent.png' class='img-fluid' alt='rxjs capter'>
+    <p>fromPromise() 函数配合es6的promise对象</p>
+    <img src='./../../../assets/img/rxjs/observablePrimise.png' class='img-fluid' alt='rxjs capter'>
+    <p>interval() interval API</p>
+    <img src='./../../../assets/img/rxjs/observableInterval.png' class='img-fluid' alt='rxjs capter'>
+    <p>timer() 计时器API</p>
+    <img src='./../../../assets/img/rxjs/timer.png' class='img-fluid' alt='rxjs capter'>
+    <p>两次执行</p>
+    <img src='./../../../assets/img/rxjs/createObservable.png' class='img-fluid' alt='rxjs capter'>
+    <p>finally() 当observable对象事件执行完成后执行次函数</p>
+    <img src='./../../../assets/img/rxjs/subscriptionEnd.png' class='img-fluid' alt='rxjs capter'>
+    <p>map() 处理数据事件</p>
+    <img src='./../../../assets/img/rxjs/map.png' class='img-fluid' alt='rxjs capter'>
+    <p>do 概念相当于管道</p>
+    <img src='./../../../assets/img/rxjs/do.png' class='img-fluid' alt='rxjs capter'>
+    <p>filter() 过滤器</p>
+    <img src='./../../../assets/img/rxjs/filter.png' class='img-fluid' alt='rxjs capter'>
+    <p>first() and last() 获取指定数据</p>
+    <img src='./../../../assets/img/rxjs/first-and-last.png' class='img-fluid' alt='rxjs capter'>
+    <p class='text-right'><em>Conclusion: ...!</em></p>
+  </div>" }
