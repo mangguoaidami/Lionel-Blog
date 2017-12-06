@@ -1,83 +1,37 @@
 <div class='artical'>
-  <h3 class='display-5'>-构建优化器</br></h3>
-  <p>
-    从5.0.0开始，使用CLI创建的生产版本现在将默认应用生成优化器。
-构建优化器是一个包含在我们的CLI中的工具，通过对您的Angular应用程序的语义理解，使您的bundle变小。</br>
-构建优化器有两个主要的工作。首先，我们可以将应用程序的某些部分标记为纯粹的，这样可以改善现有工具提供的树震动，从而删除不需要的应用程序的其他部分。
-构建优化器所做的第二件事是从您的应用程序的运行时代码中删除Angular装饰器。装饰器由编译器使用，在运行时不需要，可以删除。这些作业中的每一个都会减少JavaScript包的大小，并为用户提高应用程序的启动速度。</br>
-  </p>
-  <h3 class='display-5'>-有角的通用状态转移API和DOM支持</br></h3>
-  <p>
-    现在，您可以更轻松地在应用程序的服务器端和客户端版本之间共享应用程序状态。</br>
-Angular Universal是一个专注于帮助开发人员执行Angular应用程序的服务器端呈现（SSR）的项目。通过在服务器上呈现您的Angular应用程序，然后在生成的HTML之上进行引导，您可以添加对不支持JavaScript的抓取工具和抓取工具的支持，并且可以提高应用程序的感知性能。</br>
-ServerTransferStateModule和相应的BrowserTransferStateModule。此模块允许您在平台服务器中生成信息作为渲染的一部分，然后将其传输到客户端，以便不需要重新生成该信息。这对于您的应用程序通过HTTP获取数据的情况很有用。通过从服务器传输状态，这意味着开发人员不需要在应用程序将其发送到客户端时发出第二个HTTP请求。国家转移的文件在接下来的几周即将出版。</br>
-来自Angular Universal团队的另一个变化是将Domino添加到平台服务器。 Domino意味着我们在服务器端上下文中支持更多的DOM操作，从而改进了对不支持服务器端的第三方JS和组件库的支持。</br>
-  </p>
-  <h3 class='display-5'>-编译器改进</br></h3>
-  <p>我们改进了Angular编译器来支持渐进式编译。这提供了更快的重建，特别是对于生产构建和使用AOT构建。我们还为装饰者添加了功能，并通过删除空格来发送更小的捆绑包。</br></p>
-  <h3 class='display-5'>-TypeScript转换</br></h3>
-  <p>在引擎盖下，Angular编译器现在作为TypeScript转换工具运行，使增量重建速度显着提高。 TypeScript变换是作为TypeScript 2.3的一部分引入的一项新功能，它允许我们挂接到标准的TypeScript编译管道。</br>
-您可以通过在打开AOT标志的情况下运行ng服务来利用此优势。</p>
-<kbd>$ng serve —aot</kbd></br>
-<p>我们建议大家试试这个。这将成为CLI未来版本的默认设置。有超过一千个组件的项目有一些已知的速度问题。我们希望确保各种规模的项目都能体验到这些改进。</br>
-当执行https://angular.io的增量AOT构建时，新的编译器管道可以节省95％的构建时间（从开发机器上的40秒到不到2秒）。</br>
-我们的目标是使AOT编译速度足够快，以便开发人员可以将其用于开发，消除开发人员第一次尝试投入生产时所遇到的差异。该团队已经达到了2秒的增量AOT重建性能目标，并将在未来的CLI版本中默认开启AOT。</br>
-作为转换过程的一部分，我们不再需要genDir了，而outDir已经改变了：现在我们总是发出node_modules中包的生成文件。</br></p>
-  <h3 class='display-5'>-保留空白</br></h3>
-  <p>从历史上看，模板中的制表符，换行符和空格已经由编译器忠实地重新创建并包含在构建中。您现在可以选择是否保留来自组件和应用程序的空白。</br>
-您可以将其指定为每个组件的装饰器的一部分，其中当前默认为true。</br></p>
-<kbd>
-@Component({</br>
-  &nbsp;&nbsp;templateUrl: ‘about.component.html’,</br>
-  &nbsp;&nbsp;preserveWhitespaces: false</br>
-})</br>
-Export class AboutComponent {}</br>
-</kbd>
-<p>或者你可以在你的tsconfig.json中指定它的应用程序范围，它当前也默认为true。</br>
-</p>
-<kbd>“angularCompilerOptions”: {</br>
-	&nbsp;&nbsp;“preserveWhitespaces”: false</br>
-}</br></kbd>
-<p>一般来说，组件级别的规范覆盖了应用程序范围的规范。将来，团队希望默认为false，以节省开发人员的空间。不要担心你的<code><pre></code>标签，这些标签是智能处理的。</br>
-在我们的文档站点阅读更多有关`preserveWhitespaces`的信息。</br>
-改进的装饰者支持</br>
-我们现在支持lambda表达式的装饰器中的表达式降低以及对象文字中useValue，useFactory和数据的值。这使您可以使用装饰器中运行时只能计算的值来降低表达式。</br>
-您现在可以使用lambda代替命名函数，这意味着您可以执行代码而不会影响d.ts或公共API。</br></p>
-<kbd>Component({</br>
-  &nbsp;&nbsp;provider: [{provide: SOME_TOKEN, useFactory: () => null}]</br>
-})</br>
-export class MyClass {}</br></kbd>
-  <h3 class='display-5'>-国际化的号码，日期和货币管道</br></h3>
-  <p>
-我们已经建立了新的号码，日期和货币管道，增加了浏览器的标准化，并消除了对国际化的填充需求。</br>
-在Angular中，我们依靠浏览器使用浏览器i18n API提供数字，日期和货币格式。这导致了大多数开发人员需要使用polyfill，这意味着用户在浏览器中看到的结果不一致，并且我们收到了常见格式（如货币管道）不符合开箱即用的意见的评论。</br>
-在5.0.0版本中，我们更新了管道以使用我们自己的实现，依靠CLDR为您想要支持的任何语言环境提供大量的语言环境支持和配置。我们已经制作了一个比较v4和v5之间管道行为的文档。</br></p>
-
-</div>
-<div class='readMe'>
-    <h3 class='display-5'>浏览器支持情况：</br></h3>
-    <h4>一、桌面端浏览器对ES2015的支持情况</h4>
-    <dl>
-      <li>
-          Chrome：51 版起便可以支持 97% 的 ES6 新特性。
-      </li>
-      <li>
-      Firefox：53 版起便可以支持 97% 的 ES6 新特性。
-      </li>
-      <li>
-   Safari：10 版起便可以支持 99% 的 ES6 新特性。
-      </li>
-      <li>
-  IE：Edge 15可以支持 96% 的 ES6 新特性。Edge 14 可以支持 93% 的 ES6 新特性。（IE7~11 基本不支持 ES6）
-      </li>
-    </dl>
-    <h4>二、移动端浏览器对ES2015的支持情况</h4>
-    <dl>
-      <li>* iOS：10.0 版起便可以支持 99% 的 ES6 新特性。</li>
-      <li>* Android：基本不支持 ES6 新特性（5.1 仅支持 25%）</li>
-    </dl>
-    <h4>三、服务器对ES2015的支持情况</h4>
-    <p>    Node.js：6.5 版起便可以支持 97% 的 ES6 新特性。（6.0 支持 92%）
-        <small>附：如何使用ES6的新特性，又能保证浏览器的兼容？
-            比较通用的工具方案有 babel，jsx，traceur，es6-shim 等</small></p>
+  
+  <div class='alert alert-warning' role='alert'>
+    <strong>Tips!</strong> If you want browser the official document can click <a href='http://www.protractortest.org'>here</a>.or visit this project <a href='https://github.com/mangguoaidami/Lionel-Blog-angular2/tree/master/e2e'>e2e Testing</a>
+  </div>
+  <h3 class='display-5'>What will we do:</br></h3>
+  <ol>
+    <li>Compare Unit/Component with E2E Testing.</li>
+    <li>Create or use a@angular/cli based project.</li>
+    <li>Adapt the e2e page object to match our app.</li>
+    <li>Write e2e tests that walk through a process.</li>
+    <li>Run the tests</li>
+  </ol>
+  <h3>1.Difference Unit/Component vs. End 2 end Testing:</h3>
+  <p><strong>Unit/Component:</strong></p>
+  <ol>
+    <li>Test a single Component, Service , Pipe etc.</li>
+    <li>Test a single specific behavior in a controlled environment.</li>
+    <li>Mock everything you need to test this functionality.</li>
+    <li>Use code coverage analysis to make sure everything is covered.</li>
+    <li>Improves code structure and quality.</li>
+    <li>Test edge cases on the most detailed level.</li>
+    <li>Know if a change breaks a specific behaviour.</li>
+    <li>Dose not test if the whole application or a process works unreal life.</li>
+  </ol><br/>
+  <p><strong>End to end Testing</strong></p>
+  <ol>
+    <li>Test complete processes “End 2 End”.</li>
+    <li>Test in real environments with the whole application.</li>
+    <li>Test real live situations.</li>
+    <li>Know if most important features work with the complete application</li>
+    <li>Focussed on the overall functionality and not the specific code structure.</li>
+    <li>Does not test Edge cases.</li>
+    <li>Does not necessarily improve code quality.</li>
+  </ol>
+  <p><em>Conclusion: You need both e2e and unit/component testing!</em></p>
 </div>

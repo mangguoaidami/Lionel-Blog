@@ -20,7 +20,7 @@ export class AuthService {
           .map(res => res.json())
           .do(res => {
             if (res.token) localStorage.setItem('auth_token', res.token);//设置localstorage
-            console.log('登录时间：'+new Date().getTime())     //打印登录时间
+            console.log('登录时间：'+new Date().getTime());     //打印登录时间
           })
       }
 
