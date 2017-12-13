@@ -70,7 +70,7 @@
                     margin-top: -5px;
                     li{
                         a{
-                            color: #ffffff;
+                            // color: #ffffff;
                             text-decoration: none;
                         }
                     }
@@ -82,8 +82,23 @@
         padding-bottom: 30px;
         .container{
             .header{
-                h2,p{
+                #test_h2 strong{
+                    font-size: 4rem;
+                    text-transform: uppercase;
+                    // font-weight: bold;
+                    background-image: linear-gradient(45deg, #f00,#ffe70a,#e6001f,#ffbc25);
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    animation: animate 20s linear infinite;
+                    background-size: 1000%;
+                }
+                p{
                     color: #ffffff;
+                }
+                @keyframes animate {
+                   0%{ background-position: 0% 100%; }
+                   50%{ background-position: 100% 0%; }
+                   100%{ background-position: 0% 100%; }
                 }
             }
         }

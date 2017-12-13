@@ -3,7 +3,6 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import { Observable } from 'rxjs/Observable';
-// import { Article } from './article.model';
 
 @Injectable()
 export class ArticleService{
@@ -44,22 +43,6 @@ export class ArticleService{
      */
     getAngularSigle(id: number){
         return this.http.get('./../../../../assets/mocks/article-angular.response.json')
-            .map(res => res.json().data[id])
-    }
-
-     /**
-     * Get Rxjs article list
-     */
-    getAllRxjsArticle(){
-        return this.http.get('./../../../../assets/mocks/article-rxjs.response.json')
-            .map(res => res.json().data)
-    }
-
-    /**
-     * Get Rxjs sigle article detiel
-     */
-    getRxjsSigle(id: number){
-        return this.http.get('./../../../../assets/mocks/article-rxjs.response.json')
             .map(res => res.json().data[id])
     }
 }

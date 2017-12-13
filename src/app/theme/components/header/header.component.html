@@ -32,7 +32,7 @@
                         <a [routerLink]="['/']">Login</a>
                     </li>
                     <li class="logout">
-                        <a (click)="logout()">LogOut</a>
+                        <a href="javascript:void(0);" class="btn btn-outline-danger btn-md" (click)="logout()">LogOut</a>
                     </li>
                 </ul>
             </div>
@@ -41,10 +41,10 @@
     <div class="banner">
         <div class="container">
             <div class="header">
-                <h2 class="text-center" id="test_h2">Hello World!🌈</h2>
-                <p class="text-center">Welcome to my blog</p>
+                <h2 class="text-center" id="test_h2"><strong>Hello World</strong></h2>
+                <p class="text-center">Welcome to my blog🌈</p>
                 <div class="clearfix text-center">
-                    <a [routerLink]="['/register']" class="btn btn-outline-danger btn-lg">signup</a>
+                    <a [routerLink]="['/register']" class="btn btn-outline-danger btn-md">signUp</a>
                 </div>
             </div>
         </div>

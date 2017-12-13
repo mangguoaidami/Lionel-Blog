@@ -28,9 +28,9 @@
             "title":"Rxjs",
             "subtitle": "this is about Rxjs introduction...",
             "avatar":"./assets/img/rxjs.png",
-            "introduction": "this is about Rxjs introduction...",
-            "string": "<div class='artical'><div class='alert alert-danger'role='alert'><strong>Tips!</strong>All notes from original<a href='https://www.youtube.com/watch?v=2LCo926NFLI'>YouTube</a></div><h3 class='display-5'>Let start!🎉</br></h3><br/><img src='./../../../assets/img/rxjs/createOberver.jpg'class='img-fluid'alt='rxjs capter'><img src='./../../../assets/img/rxjs/observableFromEvent.png'class='img-fluid'alt='rxjs capter'><img src='./../../../assets/img/rxjs/observablePrimise.png'class='img-fluid'alt='rxjs capter'><img src='./../../../assets/img/rxjs/observableInterval.png'class='img-fluid'alt='rxjs capter'><img src='./../../../assets/img/rxjs/timer.png'class='img-fluid'alt='rxjs capter'><img src='./../../../assets/img/rxjs/createObservable.png'class='img-fluid'alt='rxjs capter'><img src='./../../../assets/img/rxjs/subscriptionEnd.png'class='img-fluid'alt='rxjs capter'><img src='./../../../assets/img/rxjs/map.png'class='img-fluid'alt='rxjs capter'><img src='./../../../assets/img/rxjs/do.png'class='img-fluid'alt='rxjs capter'><img src='./../../../assets/img/rxjs/filter.png'class='img-fluid'alt='rxjs capter'><img src='./../../../assets/img/rxjs/first-and-last.png'class='img-fluid'alt='rxjs capter'></div>",
-            "link": "/pages/articlerxjs"
+            "introduction": "rxjs适用于异步场景，即前端交互中接口请求、浏览器事件以及自定义事件，通过使用rxjs带给我们前所未有的开发体验。",
+            "string": "<div class='rxjs_artical'><div class='alert alert-danger'role='alert'><strong>🌟Tips!</strong> All notes from original <a href='https://www.youtube.com/watch?v=2LCo926NFLI' class='btn btn-outline-warning btn-sm'>YouTube</a><br/>1、统一异步编程的规范，不管是Promise、ajax还是事件，通通封装成序列(Observable Sequence)，一旦有异步环节发生变更，观察序列即可截获发生变更的信息。<br/>2、前端业务层和展现层解耦，比如展现层不需要关系指定事件触发时和DOM无关的处理逻辑。同时业务层也能组装异步操作中多个异步逻辑之间的关系，无需暴露给展现层。展现层关心的是：异步操作其中环节的数据变化。<br/>3、rxjs开发业务层具有高弹性，高稳定性，高实时性等特点。</div><h3 class='display-5'>Let start!🎉</br></h3><br/><div class='card'><div class='card-block'><p>直接引入Rxjs的CDN，接下来创建observable对象。</p><img src='./../../../assets/img/rxjs/createOberver.jpg'class='img-fluid'alt='rxjs capter'></div></div><div class='card'><div class='card-block'><p style='margin-top: 2.5rem'>Rxjs事件fromEvent</p><img src='./../../../assets/img/rxjs/observableFromEvent.png'class='img-fluid'alt='rxjs capter'></div></div><div class='card'><div class='card-block'><p>fromPromise()函数配合es6的promise对象</p><img src='./../../../assets/img/rxjs/observablePrimise.png'class='img-fluid'alt='rxjs capter'></div></div><div class='card'><div class='card-block'><p>interval API</p><img src='./../../../assets/img/rxjs/observableInterval.png'class='img-fluid'alt='rxjs capter'></div></div><div class='card'><div class='card-block'><p>timer()计时器API</p><img src='./../../../assets/img/rxjs/timer.png'class='img-fluid'alt='rxjs capter'></div></div><div class='card'><div class='card-block'><p>两次执行</p><img src='./../../../assets/img/rxjs/createObservable.png'class='img-fluid'alt='rxjs capter'></div></div><div class='card'><div class='card-block'><p>finally()当observable对象事件执行完成后执行次函数</p><img src='./../../../assets/img/rxjs/subscriptionEnd.png'class='img-fluid'alt='rxjs capter'></div></div><div class='card'><div class='card-block'><p>map()处理数据事件</p><img src='./../../../assets/img/rxjs/map.png'class='img-fluid'alt='rxjs capter'></div></div><div class='card'><div class='card-block'><p>do概念相当于管道</p><img src='./../../../assets/img/rxjs/do.png'class='img-fluid'alt='rxjs capter'></div></div><div class='card'><div class='card-block'><p>filter()过滤器</p><img src='./../../../assets/img/rxjs/filter.png'class='img-fluid'alt='rxjs capter'></div></div><div class='card'><div class='card-block'><p>first()and last()获取指定数据</p><img src='./../../../assets/img/rxjs/first-and-last.png'class='img-fluid'alt='rxjs capter'></div></div><p class='text-right'><em>Conclusion:...!</em></p></div>",
+            "link": null
         },
         {
             "id":4,
@@ -65,7 +65,7 @@
             "subtitle":"this is about React Native...",
             "avatar":"./assets/img/react-native.jpg",
             "introduction": "<p class='text-center'>this is about React-Native introduction</p>",
-            "string": "React Native",
+            "string": "暂无内容跟新～",
             "link": null
         },
         {
@@ -83,7 +83,7 @@
             "subtitle":"this is about w_g...",
             "avatar":"./assets/img/g_w.jpg",
             "introduction": "<p class='text-center'>this is about w_g introduction</p>",
-            "string": "w_g...",
+            "string": "暂无内容跟新～",
             "link": null
         },
         {
@@ -92,7 +92,7 @@
             "subtitle":"this is about mysql...",
             "avatar":"./assets/img/mysql.jpg",
             "introduction": "<p class='text-center'>this is about mysql introduction</p>",
-            "string": "mysql...",
+            "string": "暂无内容跟新～",
             "link": null
         },
         {
@@ -119,7 +119,7 @@
             "subtitle":"this is about Performance optimization of Web site.",
             "avatar":"./assets/img/performmance.jpg",
             "introduction": "<p class='text-center'>this is about performance optimization of Web site.</p>",
-            "string": "Performance optimization of Web site.",
+            "string": "暂无内容跟新～",
             "link": null
         }
     ]
