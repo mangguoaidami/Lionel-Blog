@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit, AfterViewInit{
     public password:AbstractControl;
     // public model = {'userLoginId': '', 'password': ''};
     public form: FormGroup;
+    public ifShowLoadig: boolean = false;
 
     @ViewChild('myInput') inputE: ElementRef;
 
@@ -41,11 +42,12 @@ export class LoginComponent implements OnInit, AfterViewInit{
      * login表单提交
      */
     public onSubmit() {
+        this.ifShowLoadig = true;
         this.submitted = true;      //绑定submitted
         this.authService.login(this.email.value, this.password.value)
             .subscribe(
                 data => {
-                    this.router.navigate(['/pages'])
+                    this.router.navigate(['/pages']);
                 },
                 err => {
                     console.error(err);

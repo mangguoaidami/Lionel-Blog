@@ -1,0 +1,25 @@
+// {
+//     "page":1,
+//     "per_page":3,
+//     "total":12,
+//     "total_pages":4,
+//     "data":
+//     [
+//         {
+//             "id":1,
+//             "title":"do()",
+//             "avatar":"",
+//             "subtitle": "signature: do(nextOrObserver: function, error: function, complete: function): Observable透明地执行动作或副作用，如记录。",
+//             "text": "<pre><code>const source = Rx.Observable.of(1,2,3,4,5);<br/>     //transparently log values from source with 'do'<br/>     const example = source <br/>      .do(val => console.log(`BEFORE MAP: ${val}`))<br/>       .map(val => val + 10)<br/>       .do(val => console.log(`AFTER MAP: ${val}`));<br/>     //'do' does not transform values<br/>     //output: 11...12...13...14...15<br/>const subscribe = example.subscribe(val => console.log(val));</code></pre>",
+//             "link": null
+//         },
+//         {
+//             "id":2,
+//             "title":"Observer（观察者）",
+//             "avatar":"",
+//             "subtitle": "Observer是一个由回调函数组成的对象，键名分别为next、error 和 complete，以此接受Observable推送的不同类型的通知",
+//             "text": "<pre><codeclass= js ><spanclass= hljs-keyword >var</span>observer={<spanclass= hljs-attr >next</span>:<spanclass= hljs-function ><spanclass= hljs-params >x</span>=&gt;</span><spanclass= hljs-built_in >console</span>.log(<spanclass= hljs-string >'Observer got a next value: '</span>+x),<spanclass= hljs-attr >error</span>:<spanclass= hljs-function ><spanclass= hljs-params >err</span>=&gt;</span><spanclass= hljs-built_in >console</span>.error(<spanclass= hljs-string >'Observer got an error: '</span>+err),<spanclass= hljs-attr >complete</span>:<spanclass= hljs-function ><spanclass= hljs-params >()</span>=&gt;</span><spanclass= hljs-built_in >console</span>.log(<spanclass= hljs-string >'Observer got a complete notification'</span>),};</code></pre>",
+//             "link": null
+//         }
+//     ]
+// }
