@@ -1,67 +1,15 @@
-
-
-<h3 class='display-5'>-sort()</br></h3>
+<h3 class='display-5'>-slice()</br></h3>
 <p>
-    对象：any[]
-    解释：排序。</br>
-  应用：</br></p>
-  <div class='card'>
-    <div class='card-block'>
-      <p>数字排序</p>
-      <pre>
-        var numbers = [4, 2, 5, 1, 3];<br/>
-        numbers.sort(function(a, b) {<br/>
-          &nbsp;&nbsp;return a - b;<br/>
-        });<br/>
-        console.log(numbers);<br/><br/>
-        
-        // [1, 2, 3, 4, 5]
-      </pre>
-    </div>
+  对象：any[]<br/>
+  解释：截取<br/>
+  应用：
+</p>
+
+<div class='card'>
+  <div class='card-block'>
+    <p>数字排序</p>
+    <pre>
+      any[].splice(0,10)  //截取0到10字段
+    </pre>
   </div>
-  <div class='card'>
-      <div class='card-block'>
-        <p>字符串排序</p>
-        <pre>
-            var stringArray = ['Blue', 'Humpback', 'Beluga'];<br/>
-            console.log('Sorted:', stringArray.sort());<br/>
-          
-          //Sorted: – ['Beluga', 'Blue', 'Humpback']
-        </pre>
-      </div>
-    </div>
-  <div class='card'>
-    <div class='card-block'>
-      <p>对象排序</p>
-      <pre>
-          var items = [<br/>
-          &nbsp;&nbsp;{ name: 'Edward', value: 21 },<br/>
-          &nbsp;&nbsp;{ name: 'Sharpe', value: 37 },<br/>
-          &nbsp;&nbsp;{ name: 'And', value: 45 },<br/>
-          &nbsp;&nbsp;{ name: 'The', value: -12 },<br/>
-          &nbsp;&nbsp;{ name: 'Magnetic', value: 13 },<br/>
-          &nbsp;&nbsp;{ name: 'Zeros', value: 37 }<br/>
-        ];<br/>
-        <br/>
-        // sort by value<br/>
-        items.sort(function (a, b) {<br/>
-          &nbsp;&nbsp;return a.value - b.value;<br/>
-        });<br/>
-        <br/>
-        // sort by name<br/>
-        items.sort(function(a, b) {<br/>
-          &nbsp;&nbsp;var nameA = a.name.toUpperCase(); // ignore upper and lowercase<br/>
-          &nbsp;&nbsp;var nameB = b.name.toUpperCase(); // ignore upper and lowercase<br/>
-          &nbsp;&nbsp;if (nameA < nameB) {<br/>
-            &nbsp;&nbsp;return -1;<br/>
-          }<br/>
-          if (nameA > nameB) {<br/>
-            &nbsp;&nbsp;return 1;<br/>
-          }<br/>
-        <br/>
-          // names must be equal<br/>
-          &nbsp;&nbsp;return 0;<br/>
-        });<br/>
-      </pre>
-    </div>
-  </div>
+</div>
