@@ -1,15 +1,18 @@
-<h3 class='display-5'>-slice()</br></h3>
+<h3 class='display-5'>-find()</br></h3>
 <p>
-  对象：any[]<br/>
-  解释：截取<br/>
-  应用：
+    解释：find（）方法返回数组中第一个满足提供的测试函数的元素的值。否则返回undefined。<br/>
+    应用：
 </p>
 
 <div class='card'>
   <div class='card-block'>
-    <p>数字排序</p>
     <pre>
-      any[].splice(0,10)  //截取0到10字段
+      function isBigEnough(element) {<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;return element >= 15;<br/>
+      }<br/>
+      <br/>
+      [12, 5, 8, 130, 44].find(isBigEnough); // 130<br/>
     </pre>
+    <img src=''>
   </div>
 </div>
