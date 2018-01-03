@@ -7,7 +7,7 @@ import { HeaderComponent, FooterComponent } from './components';
 const NGA_COMPONENTS = [
     HeaderComponent,
     FooterComponent
-]
+];
 
 @NgModule({
     imports: [ CommonModule, RouterModule ],
@@ -20,6 +20,6 @@ export class NgaModule {
     static forRoot(): ModuleWithProviders{
         return <ModuleWithProviders> {
             ngModule: NgaModule
-        }
-    }
+        };
+    };
 }

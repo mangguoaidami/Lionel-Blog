@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterViewInit, SimpleChanges, ViewChild, ElementRef } from '@angular/core';
-import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/forms';
+import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
 
 import { AuthService } from './../../theme/services/authService/auth.service';
 
@@ -12,9 +11,8 @@ import { AuthService } from './../../theme/services/authService/auth.service';
 
 export class LoginComponent implements OnInit, AfterViewInit{
     public submitted: boolean = false;
-    public email:AbstractControl;
-    public password:AbstractControl;
-    // public model = {'userLoginId': '', 'password': ''};
+    public email: AbstractControl;
+    public password: AbstractControl;
     public form: FormGroup;
     public ifShowLoadig: boolean = false;
 
@@ -31,19 +29,21 @@ export class LoginComponent implements OnInit, AfterViewInit{
     }
 
     ngOnInit() {
-      console.log('1.copy this code in your constol: localStorage.setItem("auth_token", "QpwL5tke4Pnpja7X")'+ '\n' + '2.Input account to login => username: peter@klaven, password: cityslicka');
-    }
-    
-    ngAfterViewInit(){
+      console.log('1.copy this code in your constol: localStorage.setItem("auth_token", "QpwL5tke4Pnpja7X")' +
+      '\n' +
+      '2.Input account to login => username: peter@klaven, password: cityslicka');
+    };
+
+    ngAfterViewInit() {
         this.inputE.nativeElement.focus();
-    }
+    };
 
     /**
      * login表单提交
      */
     public onSubmit() {
         this.ifShowLoadig = true;
-        this.submitted = true;      //绑定submitted
+        this.submitted = true;      // 绑定submitted
         this.authService.login(this.email.value, this.password.value)
             .subscribe(
                 data => {
@@ -52,7 +52,6 @@ export class LoginComponent implements OnInit, AfterViewInit{
                 err => {
                     console.error(err);
                 }
-            )
-
-    }
+            );
+    };
 }

@@ -10,11 +10,10 @@ import { ArticleService } from './../../theme/services/articleService/article.se
 export class ArticleAngularComponent implements OnInit{
     public articles: any[];
 
-    constructor(private articleservice: ArticleService){}
-
+    constructor(private articleservice: ArticleService) {};
     ngOnInit(){
-        //getAllAngularArticle
+        /** getAllAngularArticle */
         this.articleservice.getAllAngularArticle()
             .subscribe(data => this.articles = data);
-    }
+    };
 }

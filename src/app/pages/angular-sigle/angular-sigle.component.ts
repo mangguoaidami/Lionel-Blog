@@ -11,8 +11,7 @@ import { ArticleService } from './../../theme/services/articleService/article.se
 export class AngularSigleComponent implements OnInit{
     public article;
 
-    constructor(private route: ActivatedRoute, private service: ArticleService){}
-    
+    constructor(private route: ActivatedRoute, private service: ArticleService){};
     ngOnInit(){
         let id = this.route.snapshot.params['id'];
 
@@ -20,5 +19,5 @@ export class AngularSigleComponent implements OnInit{
             .subscribe(data => {
                 this.article = data;
             });
-    }
+    };
 }

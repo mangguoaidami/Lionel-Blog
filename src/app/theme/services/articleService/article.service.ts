@@ -10,38 +10,35 @@ export class ArticleService{
     constructor( public http: Http){}
 
     /**
-   * Get all article
-   */
+     * Get all article
+     */
     getAllArticle() {
         // return this.http.get(this.url)
         return this.http.get('./../../../../assets/mocks/article.response.json')
             .map(res => res.json().data);
-    }
+    };
 
-
-    /** 
+    /**
      * Get a sigle Article
-     * */
-    getArticleSigle(id: number){    
-        // return this.http.get(`${this.url}/${id}`)
-        //     .map(res=> res.json().data);
+     */
+    getArticleSigle(id: number) {
         return this.http.get('./../../../../assets/mocks/article.response.json')
             .map(res => res.json().data[id]);
-    }
+    };
 
     /**
      * Get Angular article list
      */
-    getAllAngularArticle(){
+    getAllAngularArticle() {
         return this.http.get('./../../../../assets/mocks/article-angular.response.json')
-            .map(res => res.json().data)
+            .map(res => res.json().data);
     }
 
     /**
      * Get Angular sigle article detiel
      */
-    getAngularSigle(id: number){
+    getAngularSigle(id: number) {
         return this.http.get('./../../../../assets/mocks/article-angular.response.json')
-            .map(res => res.json().data[id])
+            .map(res => res.json().data[id]);
     }
 }

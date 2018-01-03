@@ -1,4 +1,4 @@
-/**import Angular core module 🎆 🎆 🎆 🎆 🎆 🎆 */
+/** import Angular core module 🎆 🎆 🎆 🎆 🎆 🎆  */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
@@ -29,7 +29,7 @@ import 'rxjs/add/operator/do';
     PagesModule,
     RouterModule,
     routing,
-    SlimLoadingBarModule.forRoot(),   //import loading bar modules
+    SlimLoadingBarModule.forRoot(), // import loading bar modules
     NgaModule.forRoot()   // import Nga modules
   ],
   declarations: [
@@ -44,4 +44,5 @@ import 'rxjs/add/operator/do';
    ],
   bootstrap: [ AppComponent ]
 })
+
 export class AppModule {}

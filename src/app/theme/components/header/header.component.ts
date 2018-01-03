@@ -10,11 +10,11 @@ import { Router } from '@angular/router';
 export class HeaderComponent{
     public logIn: boolean;
 
-    constructor(private router: Router){}
+    constructor(private router: Router) {}
 
-    logout(){
-        localStorage.removeItem("auth_token");//删除localstorage
+    logout() {
+        localStorage.removeItem('auth_token');  // 删除localstorage
         this.logIn = false;
-        this.router.navigate(['/login'])
+        this.router.navigate(['/login']);
     };
 }

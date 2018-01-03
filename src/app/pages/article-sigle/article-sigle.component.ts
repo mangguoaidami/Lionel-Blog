@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ArticleService } from './../../theme/services/articleService/article.service';
 
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/Rx'
+import 'rxjs/Rx';
 
 import { PagerService } from './../../theme/services/pagerService/pager.service';
 // import { Article } from './../../theme/services/articleService/article.model';
@@ -24,7 +24,7 @@ export class ArticleSigleComponent implements OnInit{
     constructor(private route: ActivatedRoute, private service: ArticleService, private pagerService: PagerService){}
 
     ngOnInit(){
-        //get pages route's ID
+        /** get pages route's ID */
         let id = this.route.snapshot.params['id'];
         this.service.getArticleSigle(id)
             .subscribe(data => {

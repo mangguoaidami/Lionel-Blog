@@ -18,6 +18,6 @@ export class ListComponent implements OnInit{
         this.service.getAllArticle()
             .subscribe(data => {
                 this.articles = data;
-            })
-    }
+            });
+    };
 }
