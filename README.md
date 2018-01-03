@@ -15,6 +15,7 @@ The simple of blog with Angular 4.🔥 🔥 🔥 🔥
 * Responsive layout
 * High resolution
 * Bootstrap 4 CSS Framework
+* Fontawesome
 * Sass
 * Angular 4
 * jQuery
