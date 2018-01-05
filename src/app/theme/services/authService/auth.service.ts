@@ -13,14 +13,19 @@ export class AuthService {
   /**
    * this is http request
    */
-  login(username: string, password: string): Observable<string> {
-        return this.http.post(`${this.authUrl}/login`, { username, password })
-          .map(res => res.json())
-          .do(res => {
-            if (res.token) localStorage.setItem('auth_token', res.token); // 设置localstorage
-            console.log('登录时间：' + new Date().getTime());  // 打印登录时间
-          });
-      };
+  // login(username: string, password: string): Observable<string> {
+  //       return this.http.post(`${this.authUrl}/login`, { username, password })
+  //         .map(res => res.json())
+  //         .do(res => {
+  //           if (res.token) localStorage.setItem('auth_token', res.token); // 设置localstorage
+  //           console.log('登录时间：' + new Date().getTime());  // 打印登录时间
+  //         });
+  //     };
+
+  // passAuthValidation() {
+  //   localStorage.setItem('auth_token', 'auccess'); // 设置localstorage
+  //   console.log('登录时间：' + new Date().getTime());  // 打印登录时间
+  // };
 
 /**
  * 判断是否登录状态，返回boolean
@@ -30,7 +35,7 @@ export class AuthService {
     /**
      * If local sessionStorage
      */
-    if (testToken === 'QpwL5tke4Pnpja7X'){
+    if (testToken === 'auccess'){
         return true;
     }
   }
