@@ -1,4 +1,4 @@
-# Lionel Blog Framework based on Angular 4, Bootstrap 4 and Typescript
+# Lionel Blog Framework based on Angular 4, Bootstrap 4 and Typescript, Firebase
 
 The simple of blog with Angular 4.🔥 🔥 🔥 🔥
 

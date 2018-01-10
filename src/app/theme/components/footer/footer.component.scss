@@ -23,7 +23,10 @@ footer{
                     }
                     .more_link{
                         .fo_icon{
-                            display: inline-block; width: 32px; height: 32px; cursor: pointer;
+                            display: inline-block; cursor: pointer; color: #888;
+                            &:hover{
+                                color: #ccc;
+                            }
                         }
                         .wechat{
                             background: url(./../../assets/icon/wechat.png) center no-repeat;

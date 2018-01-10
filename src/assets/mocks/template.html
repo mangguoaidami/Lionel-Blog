@@ -1,26 +1,18 @@
-<h3 class='display-5'>-parseInt()</h3>
+<h3 class='display-5'>-filter()</h3>
 <p>
-  对象：string。<br/>
-	解释：parseInt() 函数可解析一个字符串，并返回一个整数。<br/>
+  any[]<br/>
+	filter() 返回一个满足条件的新数组。<br/>
 	应用：<br/>
 </p>
 <div class='card'>
   <div class='card-block'>
     <pre>
-      parseInt(’10.33‘)	//10
-    </pre>
-  </div>
-</div>
-<h3 class='display-5'>-parseFloat()</h3>
-<p>
-  对象：string。<br/>
-	解释：parseFloat() 函数可解析一个字符串，并返回一个浮点数。<br/>
-	应用：<br/>
-</p>
-<div class='card'>
-  <div class='card-block'>
-    <pre>
-      parseFloat(’10.33‘)	//10.33
+      var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];<br/>
+
+const result = words.filter(word => word.length > 6);<br/>
+
+console.log(result);<br/>
+// expected output: Array ["exuberant", "destruction", "present"]<br/>
     </pre>
   </div>
 </div>
