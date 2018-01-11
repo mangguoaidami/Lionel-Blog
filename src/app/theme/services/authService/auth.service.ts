@@ -35,7 +35,7 @@ export class AuthService {
     /**
      * If local sessionStorage
      */
-    if (testToken === 'auccess'){
+    if (testToken === 'success'){
         return true;
     }
   }

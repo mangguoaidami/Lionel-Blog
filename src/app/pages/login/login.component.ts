@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, SimpleChanges, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, SimpleChanges, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database-deprecated';
@@ -8,23 +8,25 @@ import { Observable } from 'rxjs/Observable';
 
 
 import { AuthService } from './../../theme/services/authService/auth.service';
+import { window } from 'rxjs/operator/window';
 
 @Component({
     templateUrl: 'login.component.html',
     styleUrls: ['./login.component.scss']
 })
 
-export class LoginComponent implements OnInit, AfterViewInit{
+export class LoginComponent implements OnInit, OnDestroy, AfterViewInit{
     public submitted: boolean = false;
     public email: AbstractControl;
     public password: AbstractControl;
     public form: FormGroup;
     public ifShowLoadig: boolean = false;
     
-    public user: Observable<firebase.User>;
-    public items: FirebaseListObservable<any[]>;
-    public msgVal: string = '';
-    public userState: any;  //? ? ?
+    // public user: Observable<firebase.User>;
+    // public items: FirebaseListObservable<any[]>;
+    // public msgVal: string = '';
+    // public userState: any; 
+    public authStatus: object;
 
     public ifShowSendValiBtn: boolean = false;
     public ifShowSignin: boolean = true;
@@ -41,22 +43,29 @@ export class LoginComponent implements OnInit, AfterViewInit{
         this.password = this.form.controls['password'];
         /** watching auth state 👁 👁 👁 */
         this.afAuth.authState.subscribe( auth => {
-            // this.user = auth;
             console.log(auth);
+            this.authStatus = auth;
             // if (auth != null && auth.emailVerified) {
             //     authObsever.unsubscribe();
-            // };
+            // }
         });
     };
 
-    ngOnInit() {
-    //   console.log('1.copy this code in your constol: localStorage.setItem("auth_token", "QpwL5tke4Pnpja7X")' +
-    //   '\n' +
-    //   '2.Input account to login => username: peter@klaven, password: cityslicka');
-    };
+    ngOnInit() {};
 
     ngAfterViewInit() {
         this.inputE.nativeElement.focus();
+        if(this.loggingTips){
+            this.loggingTips();
+        };
+    };
+
+    ngOnDestroy() {
+        delete this.loggingTips;
+    };
+
+    loggingTips() {
+        console.log('受中国大陆网络影响，本站暂时只能通过翻墙登录和注册。详情可邮件作者：lionelzhang123@gmail.com');
     };
 
     /**
@@ -64,30 +73,28 @@ export class LoginComponent implements OnInit, AfterViewInit{
      */
     onSubmit() {
         this.ifShowLoadig = true;
-        this.submitted = true;      // 绑定submitted
-        
         this.afAuth.auth.signInWithEmailAndPassword(this.email.value, this.password.value)
-            .catch(function(error) {
-                // Handle Errors here.
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                if (errorCode === 'auth/wrong-password') {
-                    alert('Wrong password.');
-                } else {
-                    alert(errorMessage);
-                }
-                console.log(error);
-            })
-            .then(data => {
-                // console.log('Login access!');
-                // this.authService.passAuthValidation();
-                if (data.emailVerified) {
-                    localStorage.setItem('auth_token', 'auccess');  //pass Auth
-                    this.router.navigate(['/pages']);
-                }
-            })
+        .catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            if (errorCode === 'auth/wrong-password') {
+                alert('Wrong password.');
+            }else {
+                alert(errorMessage);
+            }
+            console.log(error);
+        })
+        .then(data => {
+            if (data.emailVerified) {
+                localStorage.setItem('auth_token', 'success');  //pass Auth
+                this.router.navigate(['/pages']);
+            };
+        });
     };
-
+    /**
+     * register 💪
+     */
     signup() {
         this.ifShowSendValiBtn = true;
         this.ifShowSignin = false;
@@ -103,14 +110,11 @@ export class LoginComponent implements OnInit, AfterViewInit{
                 alert(errorMessage);
             };
             console.log(error);
-        })
-        // .then(data => {
-        //     console.log('Complated create acount.')
-        // })
+        });
     };
 
     /**
-     * send verified
+     * Send verified 💪
      */
     send_valification() {
         // this.af.signInWithEmailAndPassword('ddas', 'dadas');
@@ -119,7 +123,7 @@ export class LoginComponent implements OnInit, AfterViewInit{
             alert('error:' + error);
         })
         .then(() => {
-            window.alert('Please log in after you verify the email!');
+            alert('Please log in after you verify the email!');
             this.ifShowSendValiBtn = false;
             this.ifShowSignin = true;
         });

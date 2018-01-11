@@ -27,15 +27,6 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/do';
 
-export const firebaseConfig = {
-  apiKey: "AIzaSyD89E5SGDvjgejwCU6GmPDwu3L3dHJZuzM",
-  authDomain: "lionel-blog.firebaseapp.com",
-  databaseURL: "https://lionel-blog.firebaseio.com",
-  projectId: "lionel-blog",
-  storageBucket: "lionel-blog.appspot.com",
-  messagingSenderId: "780929940901"
-}
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -45,7 +36,7 @@ export const firebaseConfig = {
     PagesModule,
     RouterModule,
     routing,
-    AngularFireModule.initializeApp( firebaseConfig ),
+    AngularFireModule.initializeApp( FirebaseConfig ),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     SlimLoadingBarModule.forRoot(), // import loading bar modules

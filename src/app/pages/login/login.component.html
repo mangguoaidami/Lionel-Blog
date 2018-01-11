@@ -14,8 +14,9 @@
                 </div>
 
                 <div class="login-help">
-                    <p>By signing up or clicking <a [routerLink]="['/register']">here</a>, I confirm that I have
-            read and agree to the Terms and <a href="/">Privacy Policy</a></p>
+                    <!-- <p>By signing up or clicking <a [routerLink]="['/register']">here</a>, I confirm that I have
+            read and agree to the Terms and <a href="/">Privacy Policy</a></p> -->
+                        <p>Affected by the network in mainland China, the site temporarily only through the external network login and registration, please contact the author for details.</p>
                 </div>
                 
                 <div class="form-group">
@@ -25,7 +26,6 @@
                     </button>
                     <button class="btn btn-warning btn-block signup-submit" type="button" [disabled]="!form.valid" (click)="signup()"  *ngIf="ifShowSignup">Register</button>
                     <button class="btn btn-info btn-block signup-submit" type="button" (click)="send_valification()" *ngIf="ifShowSendValiBtn">send verified</button>
-                    <p>{{ user }}</p>
                 </div>
                 
             </form>
