@@ -23,6 +23,7 @@ import { AuthGuard } from './/theme/guards/AuthGuard';
 import { ArticleService } from './theme/services/articleService/article.service';
 import { PagerService } from './theme/services/pagerService/pager.service';
 import { NgaModule } from './theme/nga.module';
+// import { Global } from './theme/globals/global';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/do';
@@ -52,6 +53,7 @@ import 'rxjs/add/operator/do';
     ArticleService,
     PagerService,
     AngularFireDatabase
+    // Global
    ],
   bootstrap: [ AppComponent ]
 })

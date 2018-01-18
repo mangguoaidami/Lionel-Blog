@@ -51,16 +51,37 @@
                     margin: auto;
                     max-width: 450px;
                     float: none;
-                    // .nav-item{
-                    //     .nav-link{
-                    //         color: #fff;
-                    //         transition: color 0.3s;
-                    //         padding: 10px 15px;
-                    //         font-size: 1.2rem;
-                    //     }
+                    // .login, .logout{
+                    //     cursor: pointer;
                     // }
-                    .login, .logout{
-                        cursor: pointer;
+                    .logout{
+                        .userAvatar{
+                            margin-left: 0.5rem; display: block; float: right;
+                            img{
+                                width: 38px; height: 38px;
+                            }
+                        }
+                        .setting{
+                            display: block; float: right; position: relative;
+                            .setting_menu{
+                                z-index: 9;
+                                position: absolute;
+                                width: 255px;
+                                height: auto;
+                                top: 50px;
+                                left: -50px;
+                                .card-block{
+                                    .btn{
+                                        margin: 9px;
+                                    }
+                                    footer{
+                                        a{
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
                 .navbar-right{

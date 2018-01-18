@@ -32,7 +32,38 @@
                         <a [routerLink]="['/']">Login</a>
                     </li>
                     <li class="logout">
-                        <a href="javascript:void(0);" class="btn btn-outline-danger btn-md" (click)="logout()">LogOut</a>
+                        <a href="javascript: void(0);" class="userAvatar">
+                            <!-- <img [src]="currentUser.photoURL" class="rounded mx-auto d-block float-right" alt=""> -->
+                        </a>
+                        <!-- <div class="setting">
+                            <button type="button" class="btn btn-outline-danger" (click)="showMenu = !showMenu">
+                                <i class="fa fa-th" aria-hidden="true"></i>
+                            </button>
+                            <div class="card card-outline-info mb-3 text-left setting_menu">
+                                <div class="card-block">
+                                  <blockquote class="card-blockquote">
+                                    <button href="#" class="btn btn-outline-secondary" type="button">
+                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    </button>
+                                    <button href="#" class="btn btn-outline-secondary" type="button">
+                                        <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                                    </button>
+                                    <button href="#" class="btn btn-outline-secondary" type="button">
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    </button>
+                                    <button href="#" class="btn btn-outline-secondary" type="button">
+                                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                                    </button>
+                                    <footer class="text-center">
+                                        <a href="javascript: void(0);" (click)="logout()">
+                                            Sign out <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                        </a>
+                                    </footer>
+                                  </blockquote>
+                                </div>
+                            </div>
+                        </div> -->
+                        
                     </li>
                 </ul>
             </div>
@@ -42,7 +73,7 @@
         <div class="container">
             <div class="header">
                 <h2 class="text-center" id="test_h2"><strong>Hello World</strong></h2>
-                <p class="text-center">Welcome to my blog🌈</p>
+                <!-- <p class="text-center">Welcome {{ currentUser.displayName }} 🌈</p> -->
                 <div class="clearfix text-center">
                     <a [routerLink]="['/register']" class="btn btn-outline-danger btn-md">signUp</a>
                 </div>
