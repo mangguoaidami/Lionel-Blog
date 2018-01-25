@@ -6,10 +6,9 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthService {
-  private authUrl: string = 'https://reqres.in/api';
+  // private authUrl: string = 'https://reqres.in/api';
 
-  constructor(private router: Router, private http: Http) {
-  }
+  constructor(private router: Router, private http: Http) { }
   /**
    * this is http request
    */
@@ -38,5 +37,5 @@ export class AuthService {
     if (testToken === 'success'){
         return true;
     }
-  }
+  };
 }
