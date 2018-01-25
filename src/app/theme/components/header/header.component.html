@@ -28,18 +28,16 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-right">
-                    <li class="login" *ngIf="false">
-                        <a [routerLink]="['/']">Login</a>
-                    </li>
                     <li class="logout">
                         <a href="javascript: void(0);" class="userAvatar">
-                            <!-- <img [src]="currentUser.photoURL" class="rounded mx-auto d-block float-right" alt=""> -->
+                            <img *ngIf="currentUser.photoURL" [src]="currentUser.photoURL" class="rounded mx-auto d-block float-right" alt="">
+                            <img *ngIf="!currentUser.photoURL" class="rounded mx-auto d-block float-right" src="./../../../../assets/icon/user.png" alt="">
                         </a>
-                        <!-- <div class="setting">
-                            <button type="button" class="btn btn-outline-danger" (click)="showMenu = !showMenu">
+                        <div class="setting">
+                            <button type="button" class="btn btn-outline-danger" (click)="click()">
                                 <i class="fa fa-th" aria-hidden="true"></i>
                             </button>
-                            <div class="card card-outline-info mb-3 text-left setting_menu">
+                            <div class="card card-outline-info mb-3 text-left setting_menu" [hidden]="!showmenu">
                                 <div class="card-block">
                                   <blockquote class="card-blockquote">
                                     <button href="#" class="btn btn-outline-secondary" type="button">
@@ -62,7 +60,7 @@
                                   </blockquote>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                         
                     </li>
                 </ul>
@@ -73,7 +71,9 @@
         <div class="container">
             <div class="header">
                 <h2 class="text-center" id="test_h2"><strong>Hello World</strong></h2>
-                <!-- <p class="text-center">Welcome {{ currentUser.displayName }} 🌈</p> -->
+                <p class="text-center">Hi {{ currentUser.displayName ? currentUser.displayName: 'guys'}} 🌈</p>
+                <p>{{ currentUser | json  }}</p>
+                <p>{{ showmenu }}</p>
                 <div class="clearfix text-center">
                     <a [routerLink]="['/register']" class="btn btn-outline-danger btn-md">signUp</a>
                 </div>

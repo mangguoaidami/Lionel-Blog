@@ -9,7 +9,7 @@ import { ArticleService } from './../../theme/services/articleService/article.se
     styleUrls: ['./list.component.scss']
 })
 
-export class ListComponent implements OnInit{
+export class ListComponent implements OnInit {
     public articles;
 
     constructor(private service: ArticleService){}

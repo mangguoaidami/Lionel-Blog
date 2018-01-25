@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { HeaderComponent, FooterComponent } from './components';
+import { HeaderModule } from './components/header/header.module';
 
 const NGA_COMPONENTS = [
     HeaderComponent,

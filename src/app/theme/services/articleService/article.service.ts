@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ArticleService{
-    private url: string = 'https://reqres.in/api/users';
+    // private url: string = 'https://reqres.in/api/users';
 
     constructor( public http: Http){}
 
