@@ -31,11 +31,8 @@ export class AuthService {
  */
   hasLoggedIn() {
     let testToken = localStorage.getItem('auth_token');
-    /**
-     * If local sessionStorage
-     */
     if (testToken === 'success'){
         return true;
-    }
+    };
   };
 }

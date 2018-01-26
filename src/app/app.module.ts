@@ -28,6 +28,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/do';
 
+const AF = [ AngularFireDatabaseModule, AngularFireAuthModule ];
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -38,8 +40,7 @@ import 'rxjs/add/operator/do';
     RouterModule,
     routing,
     AngularFireModule.initializeApp( FirebaseConfig ),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
+    AF,
     SlimLoadingBarModule.forRoot(), // import loading bar modules
     NgaModule.forRoot()   // import Nga modules
   ],

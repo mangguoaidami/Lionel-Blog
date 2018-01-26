@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy, AfterViewInit, SimpleChanges, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database-deprecated'; 
+// import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database-deprecated'; 
 import { AngularFireAuth } from 'angularfire2/auth';    //  FirebaseAuth    🔥 🔥 🔥 🔥 🔥
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 
 
-import { AuthService } from './../../theme/services/authService/auth.service';
+// import { AuthService } from './../../theme/services/authService/auth.service';
 import { window } from 'rxjs/operator/window';
 
 @Component({
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy{
 
     @ViewChild('focusInput') inputE: ElementRef;
 
-    constructor( private fb: FormBuilder, private router: Router, public afAuth: AngularFireAuth,public afDataBase: AngularFireDatabase, private authService: AuthService) {
+    constructor( private fb: FormBuilder, private router: Router, public afAuth: AngularFireAuth) {
         this.form = fb.group({
             'email': ['', Validators.compose([Validators.required, Validators.minLength(4)])],
             'password': ['', Validators.compose([Validators.required, Validators.minLength(4)])]

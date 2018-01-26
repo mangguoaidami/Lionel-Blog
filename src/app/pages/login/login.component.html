@@ -1,11 +1,10 @@
 <div id="login-box">
     <div class="login-card">
             <h3>Lionel-Blog</h3>
-            <hr>
             <form [formGroup]="form" (ngSubmit)="onSubmit()">
                 <div class="form-group" [ngClass]="{'has-error': (!email.valid && email.touched), 'has-success': (email.valid && email.touched)}">
                     <label for="formGroupEmail">Email</label>
-                    <input type="text" [formControl]="email" name="formGroupEmail" class="form-control" id="formGroupEmail" placeholder="Email/Username" #focusInput>
+                    <input type="text" [formControl]="email" name="formGroupEmail" class="form-control" id="formGroupEmail" placeholder="Email" #focusInput>
                 </div>
 
                 <div class="form-group" [ngClass]="{'has-error': (!password.valid && password.touched), 'has-success': (password.valid && password.touched)}">
@@ -14,12 +13,10 @@
                 </div>
 
                 <div class="login-help">
-                    <!-- <p>By signing up or clicking <a [routerLink]="['/register']">here</a>, I confirm that I have
-            read and agree to the Terms and <a href="/">Privacy Policy</a></p> -->
                         <p>Affected by the network in mainland China, the site temporarily only through the external network login and registration, please contact the author for details.</p>
                         <a class="googleBtn" (click)="signInWithGoogle()"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
-                        <a class="githubBtn" (click)="signInWithGithub()"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-                        <a class="facebookBtn" (click)="signInWithFacebook()"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                        <!-- <a class="githubBtn" (click)="signInWithGithub()"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a> -->
+                        <!-- <a class="facebookBtn" (click)="signInWithFacebook()"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> -->
                         <a class="twitterBtn" (click)="signInWithTwitter()"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
                         
                 </div>
@@ -32,7 +29,6 @@
                     <button class="btn btn-warning btn-block signup-submit" type="button" [disabled]="!form.valid" (click)="signup()"  *ngIf="ifShowSignup">Register</button>
                     <button class="btn btn-info btn-block signup-submit" type="button" (click)="send_valification()" *ngIf="ifShowSendValiBtn">send verified</button>
                 </div>
-                
             </form>
     </div>
 </div>

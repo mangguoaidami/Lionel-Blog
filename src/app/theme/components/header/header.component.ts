@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';    //  FirebaseAuth    🔥 🔥 🔥 🔥 🔥
 // import * as firebase from 'firebase/app';
 import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/switchMap'
 
 
 // import { User } from './../../models/user';
@@ -10,8 +11,7 @@ import 'rxjs/add/operator/map';
 @Component({
     selector: 'header-app',
     templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss'],
-    providers: []
+    styleUrls: ['./header.component.scss']
 })
 
 export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy{

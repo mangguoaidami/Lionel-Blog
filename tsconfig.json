@@ -20,7 +20,8 @@
     ]
     // "types": [
     //   "jasmine",
-    //   "firebase"
+    //   "firebase",
+    //   "node"
     // ]
   },
   "exclude": [

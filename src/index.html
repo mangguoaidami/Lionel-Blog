@@ -10,7 +10,18 @@
 
   <meta name="description" content="<%= htmlWebpackPlugin.options.metadata.description %>">
   <link rel="icon" href="./assets/icon/lion.png">
-  <link rel="stylesheet" href="./assets/css/loading-bar.css">
+  <!-- <link rel="stylesheet" href="./assets/css/loading-bar.css"> -->
+  <style>
+    .slim-loading-bar {
+      position: fixed;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99999;
+    }
+  </style>
   <!-- <% if (webpackConfig.htmlElements.headTags) { %> -->
   <!-- Configured Head Tags  -->
   <!-- <%= webpackConfig.htmlElements.headTags %>
