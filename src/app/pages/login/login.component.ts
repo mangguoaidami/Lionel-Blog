@@ -94,7 +94,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy{
                 console.log('success sign in with email!');
                 this.passAuth();  //pass Auth
             }else {
-                alert('Please validate your acount of email.')
+                alert('Please validate your acount of email.');
             };
         });
     };
@@ -114,10 +114,10 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy{
             })
             .then(data => {
                 // The firebase.User instance:
-                let user = data.user;
+                // let user = data.user;
                 // The Facebook firebase.auth.AuthCredential containing the Facebook
                 // access token:
-                let credential = data.credential;
+                // let credential = data.credential;
                 console.log('success sign in with Google!');
                 this.passAuth();  //pass Auth
             }, error => {
