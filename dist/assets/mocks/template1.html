@@ -1,0 +1,32 @@
+<h3 class='display-5'>Angular Language Service</br></h3>
+<h2>What is Angular Language Service</h2>
+<p>
+    Angular Language Service是一种获取Angular模板中的完成，错误，提示和导航的方法，无论它们是HTML文件中的外部还是嵌入到字符串中的注释/装饰器中。 Angular Language Service会自动检测您打开Angular文件，读取您的tsconfig.json文件，找到您的应用程序中的所有模板，然后为您打开的任何模板提供语言服务。<br/>
+    详情以<a href='https://angular.io/guide/language-service'>官方文档</a>为主。
+</p>
+
+<div class='card'>
+  <div class='card-block'>
+    <h5>Step 1: Visual Studio Code Install Angular Language Service</h5>
+    <pre>
+        ext install ng-template or<br/>
+        Click extensions button, find Angular Language Service, download...
+    </pre>
+    <h5>Step 2: install @angular/language-service</h5>
+    <pre>
+        devDependencies {
+            &nbsp;&nbsp;&nbsp;&nbsp;'@angular/language-service': '^5.0.0'
+        }
+    </pre>
+    <h5>Step 3: Add Typescript</h5>
+    <pre>
+        yarn add typescript@2.4.2
+    </pre>
+    <h5>Step 4: Editer tsconfig.json (也可以不用添加) </h5>
+    <pre>
+        'plugins': [
+        &nbsp;&nbsp;&nbsp;&nbsp;{'name': '@angular/language-service'}
+        ]
+    </pre>
+  </div>
+</div>
