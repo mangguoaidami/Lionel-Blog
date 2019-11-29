@@ -1,18 +1,38 @@
-<h3 class='display-5'>-find()</br></h3>
+<h3 class='display-5'>Angular Material</br></h3>
 <p>
-    解释：find（）方法返回数组中第一个满足提供的测试函数的元素的值。否则返回undefined。<br/>
-    应用：
+    详情参考
+    <a href='https://material.angular.io'>官方文档</a>
 </p>
 
 <div class='card'>
   <div class='card-block'>
+    <h3>Step 1: Install Angular Material and Angular CDK</h3>
     <pre>
-      function isBigEnough(element) {<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;return element >= 15;<br/>
-      }<br/>
-      <br/>
-      [12, 5, 8, 130, 44].find(isBigEnough); // 130<br/>
+        npm install --save @angular/material @angular/cdk
     </pre>
-    <img src=''>
+    <h3>Step 2: Animations</h3>
+    <pre>npm install --save @angular/animations</pre>
+    <pre>
+        <h5>import BrowserAnimationsModule to ‘app.module.ts’</h5><br/>
+        import {BrowserAnimationsModule} from '@angular/platform-browser/animations';<br/>
+        @NgModule({<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;...<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;imports: [BrowserAnimationsModule],<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;...<br/>
+        })
+    </pre>
+    <h3>Step 3: Import the component modules</h3>
+    <pre>
+        import {MatButtonModule, MatCheckboxModule} from '@angular/material';<br/>
+        @NgModule({<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;...<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;imports: [MatButtonModule, MatCheckboxModule],<br/>
+           &nbsp;&nbsp;&nbsp;&nbsp; ...<br/>
+        })
+    </pre>
+    <h3>Step 4: Include a theme</h3>
+    <pre>
+        @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+    </pre>
   </div>
 </div>

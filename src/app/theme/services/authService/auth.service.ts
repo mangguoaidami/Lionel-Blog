@@ -17,6 +17,7 @@ export class AuthService {
         return this.http.post(`${this.authUrl}/login`, { username, password })
           .map(res => res.json())
           .do(res => {
+            // debugger;
             if (res.token) localStorage.setItem('auth_token', res.token); // 设置localstorage
             console.log('登录时间：' + new Date().getTime());  // 打印登录时间
           });
@@ -30,7 +31,7 @@ export class AuthService {
     /**
      * If local sessionStorage
      */
-    if (testToken === 'QpwL5tke4Pnpja7X'){
+    if (testToken){
         return true;
     }
   }

@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit, AfterViewInit{
     ngOnInit() {
       console.log('1.copy this code in your constol: localStorage.setItem("auth_token", "QpwL5tke4Pnpja7X")' +
       '\n' +
-      '2.Input account to login => username: peter@klaven, password: cityslicka');
+      '2.Input account to login => username: eve.holt@reqres.in, password: cityslicka');
     };
 
     ngAfterViewInit() {
@@ -46,11 +46,14 @@ export class LoginComponent implements OnInit, AfterViewInit{
         this.submitted = true;      // 绑定submitted
         this.authService.login(this.email.value, this.password.value)
             .subscribe(
-                data => {
+                (data) => {
+                    // debugger;
+                    console.log('router', this.router)
+                    // this.router.navigate()
                     this.router.navigate(['/pages']);
                 },
                 err => {
-                    console.error(err);
+                    console.error('err', err);
                 }
             );
     };
